@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import confetti from "canvas-confetti";
 import {
-  X,
+   X,
   Lock,
   ShieldCheck,
   CheckCircle2,
   Sparkles,
   ArrowRight,
   MessageCircle,
+  ExternalLink,
+  Mail,
 } from "lucide-react";
 
 import { PRICING_PLANS } from "../data/courseData";
@@ -204,50 +206,133 @@ if (!courseId) {
 
         {/* Modal Scrollable Body */}
         <div className="p-6 overflow-y-auto space-y-5">
-
           {paymentSuccessId ? (
-            /* Success screen — shown after real Razorpay verification succeeds */
-            <div className="py-8 text-center space-y-5 animate-scaleUp">
-              <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto border-4 border-emerald-200">
-                <CheckCircle2 className="w-10 h-10" />
-              </div>
-              <div className="space-y-1">
-                <h3 className="text-2xl font-black text-slate-900">Razorpay Payment Successful!</h3>
-                <p className="text-xs text-slate-600 max-w-md mx-auto">
-                  Payment ID: <span className="font-mono font-bold text-blue-600">{paymentSuccessId}</span>
-                </p>
-              </div>
+  <div className="py-6 animate-scaleUp">
+    <div className="text-center">
+      <div className="w-16 h-16 bg-emerald-100 border-4 border-emerald-200 rounded-full flex items-center justify-center mx-auto">
+        <CheckCircle2 className="w-9 h-9 text-emerald-600" />
+      </div>
 
-              <div className="bg-linear-to-br from-blue-50 to-emerald-50 border border-blue-200 p-5 rounded-2xl max-w-md mx-auto space-y-3 shadow-sm">
-                <p className="text-xs font-bold text-slate-900">
-                  🎉 Welcome to Qnayds AI Academy! Access your course and community below:
-                </p>
-                <div className="space-y-2.5">
-                  <a
-                    href="https://lms.qnayds.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm rounded-xl shadow-lg flex items-center justify-center gap-2 transition-all cursor-pointer"
-                  >
-                    <Sparkles className="w-4 h-4 text-amber-300" />
-                    <span>Go to LMS Portal (lms.qnayds.in)</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+      <h3 className="mt-5 text-3xl font-black text-slate-900">
+        🎉 Payment Successful!
+      </h3>
 
-                  <a
-                    href="https://chat.whatsapp.com/DSgFgxESGfD41hHv77TiAb?s=cl&p=i&mlu=4&amv=1"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-extrabold text-sm rounded-xl shadow-md flex items-center justify-center gap-2 transition-all cursor-pointer"
-                  >
-                    <MessageCircle className="w-5 h-5 fill-white stroke-none" />
-                    <span>Join VIP WhatsApp Community</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ) : (
-            <>
+      <p className="mt-2 text-slate-600">
+        Your payment has been verified successfully.
+      </p>
+
+      <p className="mt-4 text-sm text-slate-500">
+        We've sent an activation email to
+      </p>
+
+      <p className="mt-1 text-blue-600 font-bold break-all">
+        {email}
+      </p>
+
+      <p className="mt-2 text-xs text-slate-500">
+        Payment ID:
+        <span className="ml-1 font-mono font-bold text-blue-600">
+          {paymentSuccessId}
+        </span>
+      </p>
+    </div>
+
+    {/* Next Steps */}
+    <div className="mt-8 bg-white border border-slate-200 rounded-2xl p-5 shadow-sm">
+      <h4 className="font-bold text-slate-900 mb-4">
+        🚀 Next Steps
+      </h4>
+
+      <div className="space-y-3">
+
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">
+            1
+          </div>
+          <span className="text-sm text-slate-700">
+            Check your email inbox
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">
+            2
+          </div>
+          <span className="text-sm text-slate-700">
+            Click <strong>Activate Account</strong>
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">
+            3
+          </div>
+          <span className="text-sm text-slate-700">
+            Create your password
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">
+            4
+          </div>
+          <span className="text-sm text-slate-700">
+            Login to QNAYDS LMS
+          </span>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <div className="w-7 h-7 rounded-full bg-blue-100 text-blue-700 text-sm font-bold flex items-center justify-center">
+            5
+          </div>
+          <span className="text-sm text-slate-700">
+            Start your learning journey 🚀
+          </span>
+        </div>
+
+      </div>
+    </div>
+
+    {/* Didn't receive email */}
+    <div className="mt-5 bg-amber-50 border border-amber-200 rounded-2xl p-4">
+      <div className="flex items-center gap-2 text-amber-900 font-semibold text-sm">
+        <Mail className="w-4 h-4" />
+        Didn't receive the activation email?
+      </div>
+
+      <ul className="mt-3 space-y-1 text-sm text-amber-800">
+        <li>• Check your Spam or Promotions folder</li>
+        <li>• Wait 2–3 minutes for delivery</li>
+        <li>• Contact support if you still don't receive it</li>
+      </ul>
+    </div>
+
+    {/* Buttons */}
+    <div className="mt-6 space-y-3">
+
+      <a
+        href="https://lms.qnayds.in"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full py-3.5 px-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
+      >
+        <ExternalLink className="w-4 h-4" />
+        Login to QNAYDS LMS
+      </a>
+
+      <a
+        href="https://chat.whatsapp.com/DSgFgxESGfD41hHv77TiAb?s=cl&p=i&mlu=4&amv=1"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold rounded-xl flex items-center justify-center gap-2 transition-all"
+      >
+        <MessageCircle className="w-4 h-4 fill-current" />
+        Join WhatsApp Community
+      </a>
+
+    </div>
+  </div>
+) : (            <>
               {/* Order Summary Box */}
               <div className="bg-blue-50/80 p-4 rounded-2xl border border-blue-200 space-y-3">
                 <div className="flex items-center justify-between">
