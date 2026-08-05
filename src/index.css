@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes buttonBlink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes buttonBlinkPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.88;
+    transform: scale(1.02);
+  }
+}
+
+.animate-enroll-blink {
+  animation: buttonBlink 2s infinite ease-in-out;
+  will-change: transform;
+}
+
+.animate-pulse-blink {
+  animation: buttonBlinkPulse 2s infinite ease-in-out;
+  will-change: transform;
+}
