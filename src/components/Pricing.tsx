@@ -35,7 +35,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
             <Sparkles className="w-4 h-4" /> Unbeatable Investment Value
           </div>
           <p className="text-base sm:text-lg font-bold leading-relaxed max-w-2xl mx-auto">
-            "വെറും <span className="bg-amber-400 text-slate-900 px-2 py-0.5 rounded font-black">₹1-ൽ</span>, ഒരു റെസ്റ്റോറന്റിൽ കുടുംബത്തോടൊപ്പം ഒരിക്കൽ ഭക്ഷണം കഴിക്കുന്ന ചെലവിൽ, ആരും പറഞ്ഞു തരാത്ത ലക്ഷങ്ങൾ സമ്പാദിക്കാനുള്ള AI സ്കിൽ രണ്ടുമാസം കൊണ്ട് നിങ്ങൾക്ക് സ്വന്തമാക്കാം."
+            "വെറും <span className="bg-amber-400 text-slate-900 px-2 py-0.5 rounded font-black">₹2499-ൽ</span>, ഒരു റെസ്റ്റോറന്റിൽ കുടുംബത്തോടൊപ്പം ഒരിക്കൽ ഭക്ഷണം കഴിക്കുന്ന ചെലവിൽ, ആരും പറഞ്ഞു തരാത്ത ലക്ഷങ്ങൾ സമ്പാദിക്കാനുള്ള AI സ്കിൽ രണ്ടുമാസം കൊണ്ട് നിങ്ങൾക്ക് സ്വന്തമാക്കാം."
           </p>
         </div>
 
