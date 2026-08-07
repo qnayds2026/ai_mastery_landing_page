@@ -201,8 +201,8 @@ export const Curriculum: React.FC<CurriculumProps> = ({
     },
    
     {
-      id: 9,
-      stepNumber: '09',
+      id: 7,
+      stepNumber: '07',
       title: 'Reselling Business',
       subtitle: 'Build a recurring revenue stream by reselling highly profitable digital products and services.',
       description:
@@ -224,8 +224,8 @@ export const Curriculum: React.FC<CurriculumProps> = ({
       ],
     },
     {
-      id: 10,
-      stepNumber: '10',
+      id: 8,
+      stepNumber: '08',
       title: 'Real-World Implementation',
       subtitle: 'Bring it all together. Launch your business, acquire clients, and start generating revenue.',
       description:
@@ -261,7 +261,7 @@ export const Curriculum: React.FC<CurriculumProps> = ({
           </div>
 
           <h2 className="text-[#111827] font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
-            10-Step Blueprint to Success
+            8-Step Blueprint to Success
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">

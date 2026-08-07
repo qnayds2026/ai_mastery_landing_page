@@ -20,13 +20,7 @@ const SHORTS: ShortVideo[] = [
     title: "Live Student Session & Real AI Workflow",
     tag: "🎥 Live Class",
     youtubeId: "E68zlKM292A",
-  },
-  {
-    id: "3",
-    title: "Hands-on AI Monetization & Case Study",
-    tag: "🎥 Live Class",
-    youtubeId: "-Xqia5RB0WM",
-  },
+  }, 
   {
     id: "4",
     title: "Practical AI Automation Class Breakdown",
@@ -44,6 +38,12 @@ const SHORTS: ShortVideo[] = [
     title: "AI Course Result & Student Success",
     tag: "⭐ Success Story",
     youtubeId: "4gQxDTJeHqk",
+  },
+    {
+    id: "8",
+    title: "Student Success Story & Feedback",
+    tag: "Student Testimonial",
+    youtubeId: "tIVud4h7ogk",
   },
 ];
 

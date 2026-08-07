@@ -13,10 +13,7 @@ export const LearningOutcomes: React.FC = () => {
     { title: 'Generate AI Voiceovers' },
     { title: 'Build Websites without Coding' },
     { title: 'Research Winning Products' },
-    { title: 'Launch Dropshipping Stores' },
-    { title: 'Earn through Affiliate Marketing' },
     { title: 'Start Reselling Businesses' },
-    { title: 'Generate Leads' },
     { title: 'Build Personal Branding' },
     { title: 'Create Multiple Income Streams' },
   ];

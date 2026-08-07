@@ -143,7 +143,7 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
                 Follow the 4-Week Action Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-                Get immediate access to all 10 modules, video tutorials, templates, and 1-on-1 WhatsApp mentoring today.
+                Get immediate access to all 8 modules, video tutorials, templates, and 1-on-1 WhatsApp mentoring today.
               </p>
             </div>
 
