@@ -296,7 +296,7 @@ export const PRICING_PLANS: PricingPlan[] = [
     id: "recorded",
     name: "Recorded Course",
     tagline: "Complete self-paced training with mentoring & resources",
-    price: "2499",
+    price: "1499",
     originalPrice: "6,999",
     currencySymbol: "₹",
     popular: true,
@@ -309,7 +309,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Templates",
       "Resources"
     ],
-    ctaText: "Enroll Now — Instant Access (₹2499)"
+    ctaText: "Enroll Now — Instant Access (₹1499)"
   }
 ];
 

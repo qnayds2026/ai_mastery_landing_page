@@ -24,66 +24,34 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
     {
       step: "Week 1",
       title: "Digital Foundation",
-      description: "Setting up profiles, managers, and your brand's digital core.",
+      description: "Set up your profile, tools, and the basics you need to start fast.",
       icon: Layers,
       color: "from-blue-500 to-indigo-600",
       badge: "Foundation"
     },
     {
       step: "Week 2",
-      title: "Advertising Mastery",
-      description: "Launching your first Meta Ad campaigns and understanding metrics.",
+      title: "AI Offer & Brand",
+      description: "Define your niche, message, and offer so your first launch feels clear and compelling.",
       icon: Target,
       color: "from-indigo-500 to-purple-600",
-      badge: "Paid Traffic"
+      badge: "Positioning"
     },
     {
       step: "Week 3",
-      title: "AI Designing",
-      description: "Creating converting visuals, posters, and brand identities.",
-      icon: Palette,
+      title: "Launch & Content",
+      description: "Create your first assets, content, and outreach plan to start attracting attention.",
+      icon: Video,
       color: "from-purple-500 to-pink-600",
-      badge: "Creative"
+      badge: "Launch"
     },
     {
       step: "Week 4",
-      title: "AI Video Creation",
-      description: "Scripting, generating, and editing AI-driven video content.",
-      icon: Video,
-      color: "from-pink-500 to-rose-600",
-      badge: "Viral Content"
-    },
-    {
-      step: "Week 5",
-      title: "Website Development",
-      description: "Building a high-converting no-code landing page or store.",
-      icon: Layout,
-      color: "from-rose-500 to-orange-500",
-      badge: "Store / Funnel"
-    },
-    {
-      step: "Week 6",
-      title: "Business Models",
-      description: "Choosing between Dropshipping, Reselling, or Affiliate frameworks.",
-      icon: Briefcase,
-      color: "from-amber-500 to-emerald-500",
-      badge: "Monetization"
-    },
-    {
-      step: "Week 7",
-      title: "Marketing & Sales",
-      description: "Driving organic and paid traffic, building sales funnels.",
-      icon: TrendingUp,
-      color: "from-emerald-500 to-teal-600",
-      badge: "Conversion"
-    },
-    {
-      step: "Week 8",
-      title: "Business Launch",
-      description: "Final project deployment. Launch your brand to the world.",
+      title: "Conversion & Growth",
+      description: "Refine your offer, close your first opportunities, and build momentum.",
       icon: Rocket,
-      color: "from-blue-600 to-indigo-700",
-      badge: "Go Live 🚀"
+      color: "from-pink-500 to-rose-600",
+      badge: "Growth"
     }
   ];
 
@@ -103,14 +71,14 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
             <Compass className="w-3.5 h-3.5 text-blue-600" /> Your Journey
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight">
-            8-Week Action Plan
+            4-Week Action Plan
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            A step-by-step roadmap taking you from zero experience to launching your fully automated, AI-driven digital brand.
+            A focused roadmap taking you from zero experience to launching your first AI-powered offer in just four weeks.
           </p>
         </div>
 
-        {/* 8 Weeks Grid (4 per row on desktop) */}
+        {/* 4 Weeks Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
           {steps.map((item, index) => {
             const Icon = item.icon;
@@ -172,7 +140,7 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
                 Ready to Execute Step 1?
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white">
-                Follow the 8-Week Action Plan
+                Follow the 4-Week Action Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
                 Get immediate access to all 10 modules, video tutorials, templates, and 1-on-1 WhatsApp mentoring today.

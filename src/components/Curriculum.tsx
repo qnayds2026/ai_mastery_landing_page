@@ -199,53 +199,7 @@ export const Curriculum: React.FC<CurriculumProps> = ({
         { title: '6.3 Product Validation & Demand Analysis', duration: '21:00' },
       ],
     },
-    {
-      id: 7,
-      stepNumber: '07',
-      title: 'Dropshipping',
-      subtitle: 'Launch a global e-commerce business without holding any physical inventory.',
-      description:
-        'Launch a global e-commerce business without holding any physical inventory.',
-      icon: <ShoppingBag className="w-5 h-5 text-[#3563FF]" />,
-      duration: '4.5 Hours',
-      deliverable: 'Automated Dropshipping Checklist',
-      keyTopics: [
-        'Store Setup',
-        'Product Sourcing',
-        'Order Fulfillment',
-        'Marketing',
-        'Scaling',
-        'Automation',
-      ],
-      lessons: [
-        { title: '7.1 Store Setup & Product Sourcing', duration: '25:15' },
-        { title: '7.2 Order Fulfillment & Automated Logistics', duration: '32:00' },
-        { title: '7.3 E-Commerce Marketing, Scaling & Automation', duration: '18:45' },
-      ],
-    },
-    {
-      id: 8,
-      stepNumber: '08',
-      title: 'Affiliate Marketing',
-      subtitle: 'Generate passive income by promoting other people\'s proven products and services.',
-      description:
-        'Generate passive income by promoting other people\'s proven products and services.',
-      icon: <Zap className="w-5 h-5 text-[#3563FF]" />,
-      duration: '3.5 Hours',
-      deliverable: 'High-Ticket Affiliate Blueprint',
-      keyTopics: [
-        'Affiliate Programs',
-        'Passive Income',
-        'Content Strategy',
-        'Scaling',
-        'Commission Systems',
-      ],
-      lessons: [
-        { title: '8.1 Affiliate Programs & Commission Systems', duration: '21:30' },
-        { title: '8.2 Passive Income Content Strategy', duration: '26:00' },
-        { title: '8.3 Scaling Affiliate Income Streams', duration: '20:10' },
-      ],
-    },
+   
     {
       id: 9,
       stepNumber: '09',

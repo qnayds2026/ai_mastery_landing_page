@@ -112,7 +112,7 @@ export default function App() {
           <div className="absolute top-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
           <div className="max-w-4xl mx-auto bg-gradient-to-r from-blue-900/60 via-indigo-900/60 to-slate-900/90 border border-blue-500/30 p-6 sm:p-8 rounded-3xl shadow-2xl backdrop-blur-sm text-center relative z-10 space-y-4">
             <p className="text-base sm:text-xl font-bold text-white leading-relaxed max-w-3xl mx-auto">
-              "വെറും <span className="bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 font-black px-2.5 py-0.5 rounded-lg shadow-md">₹2499-ൽ</span>, ഒരു റെസ്റ്റോറന്റിൽ കുടുംബത്തോടൊപ്പം ഒരിക്കൽ ഭക്ഷണം കഴിക്കുന്ന ചെലവിൽ, ആരും പറഞ്ഞു തരാത്ത ലക്ഷങ്ങൾ സമ്പാദിക്കാനുള്ള AI സ്കിൽ രണ്ടുമാസം കൊണ്ട് നിങ്ങൾക്ക് സ്വന്തമാക്കാം."
+              "വെറും <span className="bg-gradient-to-r from-amber-400 to-yellow-300 text-slate-950 font-black px-2.5 py-0.5 rounded-lg shadow-md">₹1499-ൽ</span>, ഒരു റെസ്റ്റോറന്റിൽ കുടുംബത്തോടൊപ്പം ഒരിക്കൽ ഭക്ഷണം കഴിക്കുന്ന ചെലവിൽ, ആരും പറഞ്ഞു തരാത്ത ലക്ഷങ്ങൾ സമ്പാദിക്കാനുള്ള AI സ്കിൽ ഒരു മാസം (4 ആഴ്ച) കൊണ്ട് നിങ്ങൾക്ക് സ്വന്തമാക്കാം."
             </p>
             <div className="pt-2 flex items-center justify-center gap-2 text-xs font-semibold text-slate-400">
               <ShieldCheck className="w-4 h-4 text-emerald-400" />
@@ -158,7 +158,7 @@ export default function App() {
         {/* Real Classes, Real Results - YouTube Shorts / Video Showcase */}
         <RealClassesResults />
 
-        {/* Your Journey: 8-Week Action Plan */}
+        {/* Your Journey: 4-Week Action Plan */}
         <JourneyRoadmap onOpenCheckout={handleOpenCheckout} />
 
         {/* Course Curriculum: 10-Step Blueprint to Success */}
