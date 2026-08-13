@@ -196,64 +196,102 @@ export const COURSE_MODULES: CourseModule[] = [
     ]
   }
 ];
-
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: "test-1",
-    name: "Marcus Vance",
-    role: "Former Accountant -> AI Agency Owner",
-    location: "Austin, Texas",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    name: "അമൽ കെ.",
+    role: "Student",
+    location: "Malappuram, Kerala",
+    avatar: "/images/testimonials/student-1.jpg",
     rating: 5,
-    earnings: "$14,200/mo",
-    timeframe: "Month 2 after course",
-    businessType: "AI Copywriting & Lead Gen",
-    quote: "I had zero coding experience and was burnt out at my 9-to-5. Module 2 & 5 completely changed my life. I signed 3 local dental practices for $3,500/mo each to build AI lead follow-up bots. The templates alone are worth 100x the course price!",
-    highlight: "Made back $14,200 in 60 days",
-    verified: true
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI Tools",
+    quote:
+      "AI tools ഉപയോഗിക്കാൻ ഇത്ര എളുപ്പമാണെന്ന് ഈ ക്ലാസിൽ വന്നപ്പോഴാണ് മനസ്സിലായത്. ഓരോ കാര്യവും step by step ആയി പറഞ്ഞു തരുന്നത് വളരെ helpful ആയിരുന്നു. പ്രത്യേകിച്ച് practical sessions വളരെ ഇഷ്ടപ്പെട്ടു.",
+    highlight: "Easy to understand & practical",
+    verified: true,
   },
+
   {
     id: "test-2",
-    name: "Sophia Chen",
-    role: "College Student -> Faceless Creator",
-    location: "Toronto, Canada",
-    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80",
+    name: "ഫാത്തിമ നസ്റിൻ",
+    role: "Content Creator",
+    location: "Kozhikode, Kerala",
+    avatar: "/images/testimonials/student-2.jpg",
     rating: 5,
-    earnings: "$8,950/mo",
-    timeframe: "45 days in",
-    businessType: "Faceless YouTube Channels",
-    quote: "Following Module 3, I launched 2 faceless YouTube channels in the tech and finance niche. Using ElevenLabs and Runway, I post 4 videos a week. One hit 1.2M views in 3 weeks and generated $4,100 in AdSense plus affiliate commissions!",
-    highlight: "1.2M Views on 1st Cash Cow Channel",
-    verified: true
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI Content Creation",
+    quote:
+      "Content creation ചെയ്യുമ്പോൾ ഒരുപാട് സമയം എടുക്കുമായിരുന്നു. AI ഉപയോഗിച്ച് content ideas, captions, images തുടങ്ങിയവ എങ്ങനെ എളുപ്പത്തിൽ create ചെയ്യാം എന്ന് പഠിക്കാൻ കഴിഞ്ഞു. ഇപ്പോൾ work ചെയ്യുന്നത് കുറച്ച് കൂടി easy ആയി.",
+    highlight: "Faster content creation",
+    verified: true,
   },
+
   {
     id: "test-3",
-    name: "David K.",
-    role: "Freelance Designer -> Micro-SaaS Founder",
-    location: "Berlin, Germany",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    name: "അഭിജിത്ത് പി.",
+    role: "Freelancer",
+    location: "Kochi, Kerala",
+    avatar: "/images/testimonials/student-3.jpg",
     rating: 5,
-    earnings: "$6,800 MRR",
-    timeframe: "3 months in",
-    businessType: "AI Resume & Cover Letter Generator",
-    quote: "I built my first micro-SaaS using the Module 4 starter templates in just 4 days. Launched on ProductHunt and got 320 paying subscribers at $19/mo. Recurring income feels unbelievable!",
-    highlight: "320 Paying SaaS Subscribers",
-    verified: true
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI & Freelancing",
+    quote:
+      "AIയെ കുറിച്ച് basic knowledge മാത്രമേ ഉണ്ടായിരുന്നുള്ളൂ. Freelancing-ൽ AI എങ്ങനെ ഉപയോഗിക്കാം എന്നതിനെക്കുറിച്ച് നല്ലൊരു direction കിട്ടി. ക്ലാസുകൾ വളരെ practical ആയിട്ടാണ് തോന്നിയത്.",
+    highlight: "Better direction for freelancing",
+    verified: true,
   },
+
   {
     id: "test-4",
-    name: "Elena Rostova",
-    role: "Digital Marketer",
-    location: "London, UK",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&auto=format&fit=crop&q=80",
+    name: "ശിൽപ എം.",
+    role: "Working Professional",
+    location: "Thrissur, Kerala",
+    avatar: "/images/testimonials/student-4.jpg",
     rating: 5,
-    earnings: "$5,400/mo",
-    timeframe: "30 days in",
-    businessType: "Gumroad & Etsy Digital Products",
-    quote: "The prompt vault and Notion template blueprints allowed me to set up an automated store that sells while I sleep. Waking up to $200-$400 in Stripe notifications every morning is the best feeling ever.",
-    highlight: "Passive daily Stripe payouts",
-    verified: true
-  }
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI Productivity",
+    quote:
+      "എനിക്ക് AI tools കുറിച്ച് പലതും കേട്ടിട്ടുണ്ടായിരുന്നു, പക്ഷേ എവിടെ നിന്ന് തുടങ്ങണം എന്ന് അറിയില്ലായിരുന്നു. ഈ course ഒരു proper roadmap പോലെ തോന്നി. Beginners-ന് follow ചെയ്യാൻ പറ്റുന്ന രീതിയിലാണ് ക്ലാസുകൾ.",
+    highlight: "Clear learning roadmap",
+    verified: true,
+  },
+
+  {
+    id: "test-5",
+    name: "മുഹമ്മദ് റാഷിദ്",
+    role: "Business Owner",
+    location: "Manjeri, Kerala",
+    avatar: "/images/testimonials/student-5.jpg",
+    rating: 5,
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI for Business",
+    quote:
+      "Business-ൽ AI എങ്ങനെ practical ആയി ഉപയോഗിക്കാം എന്നതാണ് എനിക്ക് ഏറ്റവും useful ആയി തോന്നിയത്. Tools മാത്രം പരിചയപ്പെടുത്താതെ അവ ഉപയോഗിക്കുന്ന രീതിയും examples സഹിതം explain ചെയ്തു.",
+    highlight: "Useful for business applications",
+    verified: true,
+  },
+
+  {
+    id: "test-6",
+    name: "നിഹാരിക എസ്.",
+    role: "College Student",
+    location: "Ernakulam, Kerala",
+    avatar: "/images/testimonials/student-6.jpg",
+    rating: 5,
+    earnings: "—",
+    timeframe: "Course Experience",
+    businessType: "AI Skills",
+    quote:
+      "Complete beginner ആയിട്ടാണ് ഞാൻ course തുടങ്ങിയത്. ആദ്യം കുറച്ച് confusing ആയിരുന്നെങ്കിലും sessions follow ചെയ്തപ്പോൾ കാര്യങ്ങൾ മനസ്സിലായി. AI skills പഠിക്കാൻ തുടങ്ങുന്നവർക്ക് നല്ലൊരു starting point ആണ്.",
+    highlight: "Beginner-friendly learning",
+    verified: true,
+  },
 ];
 
 export const BONUSES: Bonus[] = [

@@ -1,15 +1,9 @@
 import React from 'react';
-import { 
-  Compass, 
-  Layers, 
-  Target, 
-  Palette, 
-  Video, 
-  Layout, 
-  Briefcase, 
-  TrendingUp, 
-  Bot,
-  FileText,
+import {
+  Compass,
+  Layers,
+  Palette,
+  Video,
   Rocket,
   CheckCircle2,
   ArrowRight
@@ -23,35 +17,35 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
   const steps = [
     {
       step: "Week 1",
-      title: "Digital Foundation",
-      description: "Set up your profile, tools, and the basics you need to start fast.",
+      title: "AI Foundations & Essential Tools",
+      description: "AI-യുടെ basics മനസ്സിലാക്കൂ. ChatGPT, Gemini, Canva AI — essential tools set up ചെയ്ത് confidently use ചെയ്യാൻ പഠിക്കൂ.",
       icon: Layers,
       color: "from-blue-500 to-indigo-600",
       badge: "Foundation"
     },
     {
       step: "Week 2",
-      title: "AI Offer & Brand",
-      description: "Define your niche, message, and offer so your first launch feels clear and compelling.",
-      icon: Target,
+      title: "AI Content & Creative Skills",
+      description: "Professional AI Posters, AI Videos, AI Avatars, Voiceovers — content create ചെയ്യുന്ന AI tools practically use ചെയ്യൂ.",
+      icon: Palette,
       color: "from-indigo-500 to-purple-600",
-      badge: "Positioning"
+      badge: "Creation"
     },
     {
       step: "Week 3",
-      title: "Launch & Content",
-      description: "Create your first assets, content, and outreach plan to start attracting attention.",
+      title: "Advanced Practical AI Applications",
+      description: "Meta Ads, No-Code Websites, Product Research, AI Marketing — advanced tools real business situations-ൽ apply ചെയ്യൂ.",
       icon: Video,
-      color: "from-purple-500 to-pink-600",
-      badge: "Launch"
+      color: "from-purple-500 to-blue-600",
+      badge: "Advanced"
     },
     {
       step: "Week 4",
-      title: "Conversion & Growth",
-      description: "Refine your offer, close your first opportunities, and build momentum.",
+      title: "Execution, Projects & Real-World Application",
+      description: "Everything together apply ചെയ്ത്, real projects complete ചെയ്ത്, freelancing / business / personal brand-ൽ AI skills use ചെയ്യൂ.",
       icon: Rocket,
-      color: "from-pink-500 to-rose-600",
-      badge: "Growth"
+      color: "from-blue-600 to-indigo-500",
+      badge: "Launch"
     }
   ];
 
@@ -64,7 +58,7 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 px-3.5 py-1 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest shadow-sm">
@@ -74,7 +68,8 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
             4-Week Action Plan
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
-            A focused roadmap taking you from zero experience to launching your first AI-powered offer in just four weeks.
+            ഒരു random AI course അല്ല. Beginner മുതൽ practical application വരെ
+            നിങ്ങളെ guide ചെയ്യുന്ന structured roadmap.
           </p>
         </div>
 
@@ -82,9 +77,9 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
           {steps.map((item, index) => {
             const Icon = item.icon;
-            
+
             return (
-              <div 
+              <div
                 key={item.step}
                 className="bg-white rounded-3xl p-5 border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-300 transition-all duration-200 flex flex-col justify-between group relative overflow-hidden"
               >
@@ -137,21 +132,21 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
           <div className="mt-14 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-3xl p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden border border-blue-900/50">
             <div className="space-y-2 text-center md:text-left relative z-10">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800">
-                Ready to Execute Step 1?
+                Ready to Start?
               </span>
               <h3 className="text-2xl sm:text-3xl font-black text-white">
                 Follow the 4-Week Action Plan
               </h3>
               <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
-                Get immediate access to all 8 modules, video tutorials, templates, and 1-on-1 WhatsApp mentoring today.
+                Beginner-friendly, step-by-step, practical AI learning in Malayalam — with WhatsApp support throughout.
               </p>
             </div>
 
             <button
-              onClick={() => onOpenCheckout('recorded')}
+              onClick={() => onOpenCheckout('vip')}
               className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-blue-600/30 flex items-center gap-2.5 transition-all hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap shrink-0 relative z-10 animate-enroll-blink"
             >
-              <span>Start Your Journey Now</span>
+              <span>Get Access Now</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -161,4 +156,3 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
     </section>
   );
 }
-

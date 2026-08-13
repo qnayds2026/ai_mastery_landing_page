@@ -98,7 +98,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
             </div>
             <button
               onClick={() => { onClose(); onOpenCheckout('vip'); }}
-              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer"
+              className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer animate-pulse-blink"
             >
               <Lock className="w-3.5 h-3.5" />
               <span>Unlock Full 45-Lesson Course ($47)</span>

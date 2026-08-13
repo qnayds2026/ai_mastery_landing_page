@@ -1,8 +1,12 @@
 import React from 'react';
-import { Award, CheckCircle2, Sparkles, Globe, TrendingUp } from 'lucide-react';
+import { Award, CheckCircle2, Sparkles, Globe, TrendingUp, ArrowRight } from 'lucide-react';
 import sawadImg from './sawad.png';
 
-export const Instructor: React.FC = () => {
+interface InstructorProps {
+  onOpenCheckout?: (planId?: string) => void;
+}
+
+export const Instructor: React.FC<InstructorProps> = ({ onOpenCheckout }) => {
   const achievements = [
     { icon: Globe, text: "Educated 1 Million+ learners via social media" },
     { icon: TrendingUp, text: "Helped multiple businesses scale via AI & Automation" },
@@ -20,9 +24,9 @@ export const Instructor: React.FC = () => {
   return (
     <section className="py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="bg-white border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-xl grid lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Photo Column */}
           <div className="lg:col-span-5 relative text-center flex flex-col items-center">
             <div className="relative inline-block rounded-2xl overflow-hidden p-1.5 bg-gradient-to-tr from-blue-600 via-indigo-500 to-blue-500 shadow-xl">
@@ -33,7 +37,7 @@ export const Instructor: React.FC = () => {
                 referrerPolicy="no-referrer"
               />
             </div>
-            
+
             <div className="mt-4 text-center">
               <h3 className="text-2xl font-bold text-slate-900">Sawad KT</h3>
               <p className="text-xs text-blue-600 font-bold mt-0.5">Founder – Qnayds LLP</p>
@@ -43,7 +47,7 @@ export const Instructor: React.FC = () => {
 
           {/* Bio & Details Column */}
           <div className="lg:col-span-7 space-y-6">
-            
+
             <div>
               <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full border border-blue-200 mb-3">
                 <Award className="w-3.5 h-3.5 text-blue-600" /> Meet Your Instructor
@@ -96,6 +100,17 @@ export const Instructor: React.FC = () => {
               </div>
             </div>
 
+            {/* CTA */}
+            {onOpenCheckout && (
+              <button
+                onClick={() => onOpenCheckout('vip')}
+                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-pulse-blink"
+              >
+                <span>Start Your AI Journey</span>
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            )}
+
           </div>
 
         </div>
@@ -104,4 +119,3 @@ export const Instructor: React.FC = () => {
     </section>
   );
 };
-

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PRICING_PLANS, PricingPlan } from '../data/courseData';
-import { Check, X, Zap, ArrowRight, Sparkles } from 'lucide-react';
+import { Check, X, Zap, ArrowRight, MessageCircle } from 'lucide-react';
 
 interface PricingProps {
   onOpenCheckout: (planId: string) => void;
@@ -8,34 +8,23 @@ interface PricingProps {
 
 export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
   return (
-    <section id="pricing" className="py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
-      
+    <section id="pricing" className="py-20 bg-white relative overflow-hidden border-t border-slate-200">
+
       {/* Background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-100/60 rounded-full blur-[100px] transform-gpu pointer-events-none" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-blue-50/80 rounded-full blur-[100px] transform-gpu pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
-          <div className="inline-flex items-center gap-2 bg-blue-100 border border-blue-200 px-3.5 py-1 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 text-blue-600" /> Choose Your Learning Mode
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest">
+            <Zap className="w-3.5 h-3.5 text-blue-600" /> Enroll Today
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
-            Choose Your Learning Mode
+            Simple, Honest Pricing
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Select the option that best fits your goals and schedule to start mastering AI today.
-          </p>
-        </div>
-
-        {/* Malayalam Value Proposition Callout Banner */}
-        <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-5 sm:p-6 rounded-2xl shadow-xl shadow-blue-600/15 mb-12 text-center relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-          <div className="flex items-center justify-center gap-2 mb-2 text-amber-300 font-bold text-xs uppercase tracking-wider">
-            <Sparkles className="w-4 h-4" /> Unbeatable Investment Value
-          </div>
-          <p className="text-base sm:text-lg font-bold leading-relaxed max-w-2xl mx-auto">
-            "വെറും <span className="bg-amber-400 text-slate-900 px-2 py-0.5 rounded font-black">₹1499-ൽ</span>, ഒരു റെസ്റ്റോറന്റിൽ കുടുംബത്തോടൊപ്പം ഒരിക്കൽ ഭക്ഷണം കഴിക്കുന്ന ചെലവിൽ, ആരும் പറഞ്ഞു തരാത്ത लक्षങ്ങൾ സമ്പാദിക്കാനുള്ള AI സ്കിൽ ഒരു മാസം (4 ആഴ്ച) കൊണ്ട് നിങ്ങൾക്ക് സ്വന്തമാക്കാം."
+            One course. One price. Full access. No hidden fees.
           </p>
         </div>
 
@@ -50,7 +39,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
                 key={plan.id}
                 className={`relative rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 ${
                   isPopular
-                    ? 'bg-white border-2 border-blue-600 shadow-2xl shadow-blue-600/15 scale-105 z-10'
+                    ? 'bg-white border-2 border-blue-600 shadow-2xl shadow-blue-600/15'
                     : 'bg-white border border-slate-200 hover:border-slate-300 shadow-lg'
                 }`}
               >
@@ -62,23 +51,24 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
                 )}
 
                 <div className="space-y-6">
-                  
+
                   {/* Title & Tagline */}
                   <div>
                     <h3 className="text-xl font-bold text-slate-900">{plan.name}</h3>
                     <p className="text-xs text-slate-500 mt-1 min-h-[32px]">{plan.tagline}</p>
                   </div>
 
-                  {/* Price Header */}
+                  {/* Price — no crossed-out original price */}
                   <div className="py-2 border-y border-slate-100">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-4xl sm:text-5xl font-black text-slate-900">{currency}{plan.price}</span>
-                      <span className="text-lg line-through text-slate-400 font-semibold">{currency}{plan.originalPrice}</span>
+                      <span className="text-4xl sm:text-5xl font-black text-slate-900">
+                        {currency}{plan.price}
+                      </span>
                       <span className="text-xs text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
                         ONE-TIME
                       </span>
                     </div>
-                    <div className="text-[11px] text-slate-500 mt-1">Instant Lifetime Access • No Hidden Fees</div>
+                    <div className="text-[11px] text-slate-500 mt-1">Lifetime Access • No Hidden Fees</div>
                   </div>
 
                   {/* Features List */}
@@ -121,6 +111,20 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
                     <span>{plan.ctaText}</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
+
+                  {/* WhatsApp support note */}
+                  <p className="mt-3 text-center text-[11px] text-slate-400">
+                    Questions?{' '}
+                    <a
+                      href={`https://wa.me/919074871204?text=${encodeURIComponent('Hi, I want to learn about the AI Masterclass pricing and details.')}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-emerald-600 font-semibold hover:text-emerald-500 inline-flex items-center gap-1"
+                    >
+                      <MessageCircle className="w-3 h-3" />
+                      Chat on WhatsApp
+                    </a>
+                  </p>
                 </div>
 
               </div>

@@ -6,9 +6,8 @@ import {
   VolumeX,
   Maximize,
   Sparkles,
-  Lock,
-  Clock,
   Tv,
+  ArrowRight,
 } from 'lucide-react';
 
 interface VideoSpaceProps {
@@ -48,20 +47,24 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
     },
   ];
 
-  const [activeLesson, setActiveLesson] = useState<VideoLesson>(lessons[0]);
+  const [activeLesson] = useState<VideoLesson>(lessons[0]);
 
   return (
     <section className="bg-slate-50 py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto space-y-12">
+
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-[#3563FF] font-bold text-xs tracking-wider uppercase">
-            <Tv className="w-3.5 h-3.5 text-[#3563FF]" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/60 text-blue-600 font-bold text-xs tracking-wider uppercase">
+            <Tv className="w-3.5 h-3.5 text-blue-600" />
             <span>FREE DEMO CLASS</span>
           </div>
 
-          <h2 className="text-[#111827] font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
-            AI Masterclass Demo Class
+          <h2 className="text-slate-900 font-extrabold text-2xl sm:text-3xl md:text-4xl tracking-tight leading-tight">
+            Buy ചെയ്യുന്നതിന് മുമ്പ്,
+            <span className="block text-blue-600 mt-1">
+              നിങ്ങൾ പഠിക്കാൻ പോകുന്ന രീതിയൊന്ന് കാണൂ.
+            </span>
           </h2>
 
           <p className="text-slate-600 text-base sm:text-lg max-w-2xl mx-auto font-normal">
@@ -71,7 +74,7 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
 
         {/* Video Player Box (Full Width Centered) */}
         <div className="max-w-4xl mx-auto bg-white border border-slate-200/90 rounded-3xl overflow-hidden shadow-xl flex flex-col">
-          
+
           {/* Screen Area */}
           <div className="relative aspect-video bg-slate-950 flex items-center justify-center overflow-hidden group">
             {isPlaying ? (
@@ -137,10 +140,10 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
                 }}
               >
                 <div
-                  className="h-full bg-[#3563FF] rounded-full relative"
+                  className="h-full bg-blue-500 rounded-full relative"
                   style={{ width: `${progress}%` }}
                 >
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white shadow-md border-2 border-[#3563FF]" />
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 w-3.5 h-3.5 rounded-full bg-white shadow-md border-2 border-blue-500" />
                 </div>
               </div>
 
@@ -187,6 +190,23 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
           </div>
 
         </div>
+
+        {/* Below Video — Context + CTA */}
+        <div className="max-w-3xl mx-auto text-center space-y-4">
+          <p className="text-slate-600 text-sm sm:text-base font-medium">
+            ഇതുപോലെ step-by-step practical sessions ആണ് Masterclass-ൽ ലഭിക്കുന്നത്.
+          </p>
+          {onOpenCheckout && (
+            <button
+              onClick={() => onOpenCheckout('vip')}
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
+            >
+              <span>👉 ഇതുപോലെ AI പഠിക്കാൻ ഇപ്പോൾ Join ചെയ്യൂ</span>
+              <ArrowRight className="w-5 h-5" />
+            </button>
+          )}
+        </div>
+
       </div>
     </section>
   );
