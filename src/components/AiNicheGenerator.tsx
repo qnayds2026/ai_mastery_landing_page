@@ -153,7 +153,7 @@ export const AiNicheGenerator: React.FC<AiNicheGeneratorProps> = ({ onOpenChecko
                   onClick={() => onOpenCheckout('vip')}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer animate-enroll-blink"
                 >
-                  Enroll Today for ₹1
+                  Join Free Webinar
                 </button>
               </div>
 

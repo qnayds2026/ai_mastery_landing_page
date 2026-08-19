@@ -30,16 +30,15 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenCheckout }) => {
 
         {/* Subtext */}
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
-          ₹1,499-ൽ ഒരു structured AI Masterclass-ൽ join ചെയ്ത്, step-by-step ആയി
-          practical AI skills build ചെയ്യൂ. Beginner-friendly. Malayalam support.
-          Lifetime access.
+          ₹0-ൽ ഒരു live AI webinar-ൽ join ചെയ്ത്, step-by-step practical AI
+          strategies പഠിക്കൂ. Beginner-friendly. Malayalam support.
         </p>
 
         {/* Price + CTA */}
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-3 text-white">
-            <span className="text-slate-400 text-sm font-medium">One-time investment:</span>
-            <span className="text-4xl font-black">₹1,499</span>
+            <span className="text-slate-400 text-sm font-medium line-through">₹5,000</span>
+            <span className="text-4xl font-black">₹0</span>
           </div>
 
           <button
@@ -48,13 +47,13 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenCheckout }) => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 rounded-xl" />
             <div className="relative bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 sm:py-5 rounded-[10px] flex items-center justify-center gap-3 transition-colors">
-              <span className="text-base sm:text-lg">Yes, I Want to Learn AI</span>
+              <span className="text-base sm:text-lg">Join Free Webinar</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </button>
 
           <p className="text-xs text-slate-400 mt-1">
-            Instant access after payment • No hidden charges
+            Free registration • Webinar details sent by email and WhatsApp
           </p>
         </div>
 

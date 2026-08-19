@@ -108,7 +108,7 @@ export const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ onOpenCh
             className="inline-flex items-center justify-center gap-3 text-slate-950 font-black text-base sm:text-lg bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 hover:from-emerald-300 hover:to-teal-200 px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer border border-emerald-300 animate-enroll-blink"
           >
             <ShieldCheck className="w-6 h-6 text-slate-950 shrink-0" />
-            <span>Join 100% Risk-Free Now (₹1,499)</span>
+            <span>Join Free Webinar (₹0)</span>
             <ArrowRight className="w-5 h-5 text-slate-950" />
           </button>
         </div>

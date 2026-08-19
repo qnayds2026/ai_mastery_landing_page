@@ -22,18 +22,14 @@ import { VideoModal } from "./components/VideoModal";
 import { StudentPortal } from "./components/StudentPortal";
 import { ThankYouModal } from "./components/ThankYouModal";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
-import { initMetaPixel, trackInitiateCheckout } from "./utils/metaPixel";
-import {
-  initGoogleAnalytics,
-  trackGaBeginCheckout,
-} from "./utils/googleAnalytics";
+import { initMetaPixel } from "./utils/metaPixel";
+import { initGoogleAnalytics } from "./utils/googleAnalytics";
 import { StudentRecord } from "./utils/lmsWorkflow";
 import { ArrowRight } from "lucide-react";
 import { MoneyBackGuarantee } from "./components/MoneyBackGuarantee";
 
 export default function App() {
   const [checkoutOpen, setCheckoutOpen] = useState(false);
-  const [selectedPlan, setSelectedPlan] = useState("vip");
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoTitle, setVideoTitle] = useState(
     "Module 1.1: The 2026 AI Monetization Landscape",
@@ -68,13 +64,7 @@ export default function App() {
   }, []);
 
   const handleOpenCheckout = (planId: string = "recorded") => {
-    setSelectedPlan(planId);
     setCheckoutOpen(true);
-
-    const amount = 1;
-    const planName = "Recorded Course";
-    trackInitiateCheckout(amount, planName);
-    trackGaBeginCheckout(amount, "INR", planName);
   };
 
   const handleOpenVideoPreview = (title?: string, mod?: string) => {
@@ -182,9 +172,6 @@ export default function App() {
       <CheckoutModal
         isOpen={checkoutOpen}
         onClose={() => setCheckoutOpen(false)}
-        planId={selectedPlan}
-        onSuccess={handleEnrollSuccess}
-        onPaymentFailed={handlePaymentFailed}
       />
 
       {/* Thank You & Enrollment Confirmation Modal */}
@@ -213,14 +200,14 @@ export default function App() {
                 AI Masterclass
               </span>
               <span className="text-lg font-black text-white leading-tight">
-                ₹1,499
+                <span className="line-through text-slate-400 text-sm mr-1">₹5,000</span> ₹0
               </span>
             </div>
             <button
               onClick={() => handleOpenCheckout("vip")}
               className="flex-shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95 animate-enroll-blink"
             >
-              <span>Enroll Now 🚀</span>
+              <span>Join Free Webinar</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -233,7 +220,7 @@ export default function App() {
           <div className="bg-slate-900/98 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700/80 flex items-center gap-4 animate-in fade-in slide-in-from-bottom-5 duration-300">
             <div className="flex flex-col">
               <span className="text-xs font-extrabold text-white">
-                AI Masterclass — ₹1,499
+                AI Masterclass Webinar — ₹0
               </span>
               <span className="text-[10px] text-slate-400">
                 Lifetime access • Malayalam support
@@ -243,7 +230,7 @@ export default function App() {
               onClick={() => handleOpenCheckout("vip")}
               className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95"
             >
-              <span>Enroll Now</span>
+              <span>Join Free Webinar</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

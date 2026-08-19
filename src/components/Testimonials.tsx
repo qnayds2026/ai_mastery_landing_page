@@ -201,7 +201,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
             onClick={() => onOpenCheckout("vip")}
             className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-pulse-blink"
           >
-            <span>Join the AI Masterclass</span>
+            <span>Join Free Webinar</span>
 
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>

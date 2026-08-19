@@ -175,7 +175,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenCheckout }) 
               onClick={() => onOpenCheckout('vip')}
               className="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer animate-enroll-blink"
             >
-              <span>Start This Plan for $47</span>
+              <span>Join Free Webinar</span>
               <ArrowRight className="w-4 h-4 text-white" />
             </button>
           </div>

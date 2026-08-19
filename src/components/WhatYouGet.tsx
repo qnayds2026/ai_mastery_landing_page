@@ -39,7 +39,7 @@ const inclusions = [
   {
     icon: Infinity,
     title: 'Lifetime Access',
-    description: 'One-time payment gives you lifetime access. Revisit the course whenever you need a refresher.',
+    description: 'Register free for the live webinar and receive the joining details by email and WhatsApp.',
     color: 'text-purple-600 bg-purple-50 border-purple-100',
   },
 ];
@@ -62,7 +62,7 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenCheckout }) => {
             </span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            ₹1,499-ൽ ഒരു time payment ചെയ്ത് ഈ course-ൽ ഉള്ള എല്ലാം access ചെയ്യൂ.
+            ₹0-ൽ free webinar registration ചെയ്ത് practical AI strategies പഠിക്കൂ.
           </p>
         </div>
 
@@ -99,18 +99,18 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenCheckout }) => {
                 Everything above for just
               </div>
               <div className="flex items-baseline gap-2 justify-center sm:justify-start">
-                <span className="text-4xl sm:text-5xl font-black text-slate-900">₹1,499</span>
-                <span className="text-sm font-semibold text-slate-500">one-time • lifetime access</span>
+                <span className="text-4xl sm:text-5xl font-black text-slate-900">₹0</span>
+                <span className="text-sm font-semibold text-slate-500"><span className="line-through">₹5,000</span> • free webinar</span>
               </div>
               <p className="mt-2 text-xs text-slate-500">
-                No hidden charges. No recurring fees. Access starts immediately after payment.
+                No payment required. Webinar details are sent after registration.
               </p>
             </div>
             <button
               onClick={() => onOpenCheckout('vip')}
               className="flex-shrink-0 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
             >
-              <span>Enroll Now for ₹1,499</span>
+              <span>Join Free Webinar</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>

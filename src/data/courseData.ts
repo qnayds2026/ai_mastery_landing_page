@@ -332,13 +332,13 @@ export const BONUSES: Bonus[] = [
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "recorded",
-    name: "Recorded Course",
-    tagline: "Complete self-paced training with mentoring & resources",
-    price: "1499",
-    originalPrice: "6,999",
+    name: "Free AI Masterclass Webinar",
+    tagline: "Live webinar with practical AI strategies and joining updates",
+    price: "0",
+    originalPrice: "5,000",
     currencySymbol: "₹",
     popular: true,
-    badge: "🔥 INSTANT ACCESS",
+    badge: "🔥 FREE WEBINAR",
     features: [
       "Lifetime Access",
       "Recorded Sessions",
@@ -347,7 +347,7 @@ export const PRICING_PLANS: PricingPlan[] = [
       "Templates",
       "Resources"
     ],
-    ctaText: "Enroll Now — Instant Access (₹1499)"
+    ctaText: "Join Free Webinar — ₹0"
   }
 ];
 

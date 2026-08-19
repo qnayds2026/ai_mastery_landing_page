@@ -40,8 +40,8 @@ export const ThankYouModal: React.FC<ThankYouModalProps> = ({
               <div className="w-14 h-14 bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 rounded-full flex items-center justify-center mx-auto mb-3">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h2 className="text-2xl font-black text-white tracking-tight">Payment Successful</h2>
-              <p className="text-sm text-slate-300 mt-1">Welcome to QNAYDS Academy</p>
+              <h2 className="text-2xl font-black text-white tracking-tight">Webinar Registration Confirmed</h2>
+              <p className="text-sm text-slate-300 mt-1">Your free webinar seat is reserved</p>
               <p className="text-xs text-slate-400 mt-3">
                 We've sent an activation email to<br />
                 <span className="font-bold text-white">{studentRecord.email}</span>
@@ -52,8 +52,8 @@ export const ThankYouModal: React.FC<ThankYouModalProps> = ({
               <div className="w-14 h-14 bg-amber-500/20 border border-amber-400/30 text-amber-300 rounded-full flex items-center justify-center mx-auto mb-3">
                 <AlertCircle className="w-8 h-8" />
               </div>
-              <h2 className="text-2xl font-black text-white tracking-tight">Payment Pending / Failed</h2>
-              <p className="text-sm text-slate-300 mt-1">No course access is active yet.</p>
+              <h2 className="text-2xl font-black text-white tracking-tight">Registration Pending</h2>
+              <p className="text-sm text-slate-300 mt-1">Please try registering again.</p>
             </>
           )}
         </div>
@@ -142,7 +142,7 @@ export const ThankYouModal: React.FC<ThankYouModalProps> = ({
               className="w-full flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-black text-sm px-5 py-3.5 rounded-xl transition-all shadow-md cursor-pointer"
             >
               <RefreshCw className="w-4 h-4" />
-              <span>Retry Payment & Activate Access</span>
+              <span>Register for Free Webinar</span>
             </button>
           )}
 
@@ -151,7 +151,7 @@ export const ThankYouModal: React.FC<ThankYouModalProps> = ({
         {/* Footer */}
         <div className="bg-slate-100 px-6 py-3 border-t border-slate-200 text-center text-slate-500 text-xs flex items-center justify-between">
           <span className="flex items-center gap-1">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Razorpay Verified & LMS Synced
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Registration details submitted securely
           </span>
           <button onClick={onClose} className="font-bold text-slate-700 hover:text-slate-900 cursor-pointer">
             Close

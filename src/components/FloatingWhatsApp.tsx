@@ -1,10 +1,10 @@
-import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import React from "react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export const FloatingWhatsApp: React.FC = () => {
-  const phoneNumber = '919074871204';
+  const phoneNumber = "919074871204";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
-    'Hi, I want to learn about the AI Money Making Course. Please share the details.'
+    "Hi, I want to learn about the AI Money Making Course. Please share the details.",
   )}`;
 
   return (
@@ -20,7 +20,7 @@ export const FloatingWhatsApp: React.FC = () => {
         <span className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-white animate-bounce">
           1
         </span>
-        <MessageCircle className="w-7 h-7 fill-white stroke-none" />
+        <FaWhatsapp className="w-7 h-7 fill-white stroke-none" />
       </a>
     </div>
   );

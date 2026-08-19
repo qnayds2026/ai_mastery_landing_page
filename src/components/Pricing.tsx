@@ -58,17 +58,20 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
                     <p className="text-xs text-slate-500 mt-1 min-h-[32px]">{plan.tagline}</p>
                   </div>
 
-                  {/* Price — no crossed-out original price */}
+                  {/* Webinar price */}
                   <div className="py-2 border-y border-slate-100">
                     <div className="flex items-baseline gap-2">
                       <span className="text-4xl sm:text-5xl font-black text-slate-900">
                         {currency}{plan.price}
                       </span>
+                      <span className="text-lg font-bold text-slate-400 line-through">
+                        {currency}{plan.originalPrice}
+                      </span>
                       <span className="text-xs text-blue-700 font-bold bg-blue-50 px-2 py-0.5 rounded border border-blue-200">
-                        ONE-TIME
+                        FREE
                       </span>
                     </div>
-                    <div className="text-[11px] text-slate-500 mt-1">Lifetime Access • No Hidden Fees</div>
+                    <div className="text-[11px] text-slate-500 mt-1">Free webinar registration • No payment required</div>
                   </div>
 
                   {/* Features List */}

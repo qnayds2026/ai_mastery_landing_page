@@ -127,7 +127,7 @@ export const WhyNotYoutube: React.FC<WhyNotYoutubeProps> = ({
             </p>
 
             <p className="mt-3 text-slate-700 font-semibold text-sm sm:text-base leading-7">
-              ₹1,499-ൽ നിങ്ങൾ വാങ്ങുന്നത് കുറച്ച് AI videos അല്ല —
+              ₹0-ൽ നിങ്ങൾക്ക് ലഭിക്കുന്നത് ഒരു practical AI webinar ആണ് —
               <strong className="text-slate-900">
                 {" "}
                 ഒരു structured learning path, തിരഞ്ഞെടുത്ത practical tools,
@@ -158,7 +158,7 @@ export const WhyNotYoutube: React.FC<WhyNotYoutubeProps> = ({
               onClick={() => onOpenCheckout("vip")}
               className="mt-6 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-pulse-blink"
             >
-              <span>Get Full Access for ₹1,499</span>
+              <span>Join Free Webinar</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
