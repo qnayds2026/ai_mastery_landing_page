@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 
 interface CurriculumProps {
-  onOpenCheckout?: (planId?: string) => void;
+  onOpenWebinar?: () => void;
   onSelectPreviewLesson?: (lessonTitle: string, moduleTitle: string) => void;
 }
 
@@ -39,7 +39,7 @@ interface StepItem {
 }
 
 export const Curriculum: React.FC<CurriculumProps> = ({
-  onOpenCheckout,
+  onOpenWebinar,
   onSelectPreviewLesson,
 }) => {
   const [expandedStep, setExpandedStep] = useState<number | null>(1);

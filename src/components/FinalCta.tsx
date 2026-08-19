@@ -2,10 +2,10 @@ import React from 'react';
 import { ArrowRight, Zap, MessageCircle } from 'lucide-react';
 
 interface FinalCtaProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
-export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenCheckout }) => {
+export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenWebinar }) => {
   return (
     <section className="py-16 sm:py-20 bg-slate-900 relative overflow-hidden">
       {/* Background ambient */}
@@ -42,7 +42,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenCheckout }) => {
           </div>
 
           <button
-            onClick={() => onOpenCheckout('vip')}
+            onClick={onOpenWebinar}
             className="group relative overflow-hidden rounded-xl font-bold shadow-2xl shadow-blue-600/30 hover:scale-[1.03] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 rounded-xl" />

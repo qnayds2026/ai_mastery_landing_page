@@ -3,10 +3,10 @@ import { PRICING_PLANS, PricingPlan } from '../data/courseData';
 import { Check, X, Zap, ArrowRight, MessageCircle } from 'lucide-react';
 
 interface PricingProps {
-  onOpenCheckout: (planId: string) => void;
+  onOpenWebinar: () => void;
 }
 
-export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
+export const Pricing: React.FC<PricingProps> = ({ onOpenWebinar }) => {
   return (
     <section id="pricing" className="py-20 bg-white relative overflow-hidden border-t border-slate-200">
 
@@ -18,13 +18,13 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 text-blue-600" /> Enroll Today
+            <Zap className="w-3.5 h-3.5 text-blue-600" /> Free Webinar Registration
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
             Simple, Honest Pricing
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            One course. One price. Full access. No hidden fees.
+            Free Registration • Live Webinar • WhatsApp Updates
           </p>
         </div>
 
@@ -104,7 +104,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenCheckout }) => {
                 {/* CTA Button */}
                 <div className="pt-8">
                   <button
-                    onClick={() => onOpenCheckout(plan.id)}
+                    onClick={onOpenWebinar}
                     className={`w-full py-4 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 cursor-pointer shadow-xl ${
                       isPopular
                         ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-blue-600/20 animate-enroll-blink'

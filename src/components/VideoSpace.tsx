@@ -11,7 +11,7 @@ import {
 } from 'lucide-react';
 
 interface VideoSpaceProps {
-  onOpenCheckout?: (planId?: string) => void;
+  onOpenWebinar?: () => void;
   onOpenVideoModal?: () => void;
 }
 
@@ -26,7 +26,7 @@ interface VideoLesson {
 }
 
 export const VideoSpace: React.FC<VideoSpaceProps> = ({
-  onOpenCheckout,
+  onOpenWebinar,
   onOpenVideoModal,
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -196,9 +196,9 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
           <p className="text-slate-600 text-sm sm:text-base font-medium">
             ഇതുപോലെ step-by-step practical sessions ആണ് Masterclass-ൽ ലഭിക്കുന്നത്.
           </p>
-          {onOpenCheckout && (
+          {onOpenWebinar && (
             <button
-              onClick={() => onOpenCheckout('vip')}
+              onClick={onOpenWebinar}
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
             >
               <span>👉 Free Webinar-ൽ Join ചെയ്യൂ</span>

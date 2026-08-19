@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Calculator, TrendingUp, DollarSign, Clock, Zap, ArrowRight, Sparkles } from 'lucide-react';
 
 interface RoiCalculatorProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
 const BUSINESS_MODELS = [
@@ -13,7 +13,7 @@ const BUSINESS_MODELS = [
   { id: 'digital_products', name: 'Digital Prompts & Notion Templates', baseHourlyRate: 40, avgClientRetainer: 1500, icon: '📦' }
 ];
 
-export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenCheckout }) => {
+export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenWebinar }) => {
   const [hoursPerWeek, setHoursPerWeek] = useState<number>(10);
   const [selectedModel, setSelectedModel] = useState<string>('copywriting');
   const [experience, setExperience] = useState<number>(1); // 1: Beginner, 1.3: Medium, 1.6: Advanced
@@ -172,7 +172,7 @@ export const RoiCalculator: React.FC<RoiCalculatorProps> = ({ onOpenCheckout }) 
 
             {/* CTA */}
             <button
-              onClick={() => onOpenCheckout('vip')}
+              onClick={onOpenWebinar}
               className="w-full py-3.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm shadow-xl shadow-blue-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer animate-enroll-blink"
             >
               <span>Join Free Webinar</span>

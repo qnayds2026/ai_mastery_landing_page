@@ -2,7 +2,7 @@ import React from "react";
 import { X, CheckCircle2, Youtube, BookOpen, ArrowRight } from "lucide-react";
 
 interface WhyNotYoutubeProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
 const youtubeProblems = [
@@ -24,7 +24,7 @@ const masterclasBenefits = [
 ];
 
 export const WhyNotYoutube: React.FC<WhyNotYoutubeProps> = ({
-  onOpenCheckout,
+  onOpenWebinar,
 }) => {
   return (
     <section className="py-16 sm:py-20 bg-white border-b border-slate-200 overflow-hidden">
@@ -155,7 +155,7 @@ export const WhyNotYoutube: React.FC<WhyNotYoutubeProps> = ({
             </div>
 
             <button
-              onClick={() => onOpenCheckout("vip")}
+              onClick={onOpenWebinar}
               className="mt-6 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-pulse-blink"
             >
               <span>Join Free Webinar</span>

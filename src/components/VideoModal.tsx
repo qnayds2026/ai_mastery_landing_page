@@ -6,7 +6,7 @@ interface VideoModalProps {
   onClose: () => void;
   lessonTitle?: string;
   moduleTitle?: string;
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
 export const VideoModal: React.FC<VideoModalProps> = ({
@@ -14,7 +14,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
   onClose,
   lessonTitle = "Module 1.1: The 2026 AI Monetization Landscape",
   moduleTitle = "Module 1: AI Prompt Engineering & Core Mastery",
-  onOpenCheckout
+  onOpenWebinar
 }) => {
   const [isPlaying, setIsPlaying] = useState(true);
   const [isMuted, setIsMuted] = useState(false);
@@ -97,7 +97,7 @@ export const VideoModal: React.FC<VideoModalProps> = ({
               <p className="text-xs text-slate-600 mt-1">In this lesson, you will learn the exact 5-step prompt structure that generates $100/hr commercial results.</p>
             </div>
             <button
-              onClick={() => { onClose(); onOpenCheckout('vip'); }}
+              onClick={() => { onClose(); onOpenWebinar(); }}
               className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-3 rounded-xl text-xs transition-colors flex items-center justify-center gap-2 whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer animate-pulse-blink"
             >
               <Lock className="w-3.5 h-3.5" />

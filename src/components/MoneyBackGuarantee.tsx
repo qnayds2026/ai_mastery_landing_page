@@ -2,10 +2,10 @@ import React from 'react';
 import { ShieldCheck, MessageCircle, Youtube, CheckCircle2, ArrowRight, Sparkles, RefreshCw } from 'lucide-react';
 
 interface MoneyBackGuaranteeProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
-export const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ onOpenCheckout }) => {
+export const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ onOpenWebinar }) => {
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 text-white relative overflow-hidden border-y border-blue-900/50">
       {/* Background Ambient Glow */}
@@ -104,7 +104,7 @@ export const MoneyBackGuarantee: React.FC<MoneyBackGuaranteeProps> = ({ onOpenCh
         {/* CTA Button */}
         <div className="text-center pt-2">
           <button
-            onClick={() => onOpenCheckout('vip')}
+            onClick={onOpenWebinar}
             className="inline-flex items-center justify-center gap-3 text-slate-950 font-black text-base sm:text-lg bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-400 hover:from-emerald-300 hover:to-teal-200 px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/20 hover:scale-105 active:scale-95 transition-all cursor-pointer border border-emerald-300 animate-enroll-blink"
           >
             <ShieldCheck className="w-6 h-6 text-slate-950 shrink-0" />

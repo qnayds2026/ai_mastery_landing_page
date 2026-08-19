@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { QnaydsLogo } from './QnaydsLogo';
 
 interface HeaderProps {
-  onOpenCheckout?: (planId?: string) => void;
+  onOpenWebinar?: () => void;
   onOpenPortalPreview?: () => void;
   isEnrolled?: boolean;
 }

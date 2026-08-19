@@ -3,10 +3,10 @@ import { Sparkles, Bot, ArrowRight, Loader2, Compass, CheckCircle2, Zap } from '
 import { generateAiBusinessRoadmap } from '../utils/geminiClient';
 
 interface AiNicheGeneratorProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
-export const AiNicheGenerator: React.FC<AiNicheGeneratorProps> = ({ onOpenCheckout }) => {
+export const AiNicheGenerator: React.FC<AiNicheGeneratorProps> = ({ onOpenWebinar }) => {
   const [interest, setInterest] = useState<string>('Writing & Marketing');
   const [hours, setHours] = useState<string>('10');
   const [budget, setBudget] = useState<string>('$0 - Free Tools Only');
@@ -150,7 +150,7 @@ export const AiNicheGenerator: React.FC<AiNicheGeneratorProps> = ({ onOpenChecko
                   </div>
                 </div>
                 <button
-                  onClick={() => onOpenCheckout('vip')}
+                  onClick={onOpenWebinar}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer animate-enroll-blink"
                 >
                   Join Free Webinar

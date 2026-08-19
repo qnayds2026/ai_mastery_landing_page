@@ -340,12 +340,12 @@ export const PRICING_PLANS: PricingPlan[] = [
     popular: true,
     badge: "🔥 FREE WEBINAR",
     features: [
-      "Lifetime Access",
-      "Recorded Sessions",
-      "YouTube Learning Library",
-      "WhatsApp Mentoring",
-      "Templates",
-      "Resources"
+      "Live AI Masterclass Webinar",
+      "Practical AI Strategies",
+      "Webinar Joining Updates",
+      "WhatsApp Community Access",
+      "Free Registration",
+      "Live Q&A Opportunity"
     ],
     ctaText: "Join Free Webinar — ₹0"
   }

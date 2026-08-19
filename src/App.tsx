@@ -17,19 +17,18 @@ import { Pricing } from "./components/Pricing";
 import { Faq } from "./components/Faq";
 import { FinalCta } from "./components/FinalCta";
 import { Footer } from "./components/Footer";
-import { CheckoutModal } from "./components/CheckoutModal";
+import { WebinarRegistrationModal } from "./components/WebinarRegistrationModal";
 import { VideoModal } from "./components/VideoModal";
 import { StudentPortal } from "./components/StudentPortal";
-import { ThankYouModal } from "./components/ThankYouModal";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { initMetaPixel } from "./utils/metaPixel";
-import { initGoogleAnalytics } from "./utils/googleAnalytics";
-import { StudentRecord } from "./utils/lmsWorkflow";
+import { initGoogleAnalytics, trackGaEvent } from "./utils/googleAnalytics";
+import { trackMetaEvent } from "./utils/metaPixel";
 import { ArrowRight } from "lucide-react";
 import { MoneyBackGuarantee } from "./components/MoneyBackGuarantee";
 
 export default function App() {
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [webinarOpen, setWebinarOpen] = useState(false);
   const [videoOpen, setVideoOpen] = useState(false);
   const [videoTitle, setVideoTitle] = useState(
     "Module 1.1: The 2026 AI Monetization Landscape",
@@ -37,12 +36,8 @@ export default function App() {
   const [videoModule, setVideoModule] = useState(
     "Module 1: AI Prompt Engineering & Core Mastery",
   );
-  const [isEnrolled, setIsEnrolled] = useState(false);
   const [viewingPortal, setViewingPortal] = useState(false);
   const [showStickyCta, setShowStickyCta] = useState(false);
-  const [thankYouOpen, setThankYouOpen] = useState(false);
-  const [currentStudentRecord, setCurrentStudentRecord] =
-    useState<StudentRecord | null>(null);
 
   useEffect(() => {
     // Initialize Meta Pixel and Google Analytics tracking on app mount
@@ -63,26 +58,16 @@ export default function App() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleOpenCheckout = (planId: string = "recorded") => {
-    setCheckoutOpen(true);
+  const handleOpenWebinar = () => {
+    trackGaEvent("webinar_cta_click");
+    trackMetaEvent("webinar_cta_click");
+    setWebinarOpen(true);
   };
 
   const handleOpenVideoPreview = (title?: string, mod?: string) => {
     if (title) setVideoTitle(title);
     if (mod) setVideoModule(mod);
     setVideoOpen(true);
-  };
-
-  const handleEnrollSuccess = (studentRecord: StudentRecord) => {
-    setIsEnrolled(true);
-    setCurrentStudentRecord(studentRecord);
-    setThankYouOpen(true);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  const handlePaymentFailed = (studentRecord: StudentRecord) => {
-    setCurrentStudentRecord(studentRecord);
-    setThankYouOpen(true);
   };
 
   // If user is actively viewing Student Portal Dashboard:
@@ -94,20 +79,20 @@ export default function App() {
     <div className="min-h-screen bg-white text-slate-900 font-sans selection:bg-blue-600 selection:text-white">
       {/* Header */}
       <Header
-        onOpenCheckout={handleOpenCheckout}
+        onOpenWebinar={handleOpenWebinar}
         onOpenPortalPreview={() => setViewingPortal(true)}
-        isEnrolled={isEnrolled}
+        isEnrolled={false}
       />
 
       <main>
         {/* 1. Hero Section */}
         <Hero
-          onOpenCheckout={handleOpenCheckout}
+          onOpenWebinar={handleOpenWebinar}
           onOpenVideoPreview={() => handleOpenVideoPreview()}
         />
 
         {/* 2. Social Proof — immediately after Hero */}
-        <Testimonials onOpenCheckout={handleOpenCheckout} />
+        <Testimonials onOpenWebinar={handleOpenWebinar} />
 
         {/* 3. Watch Before You Enroll — Intro Video */}
         <IntroVideo />
@@ -116,70 +101,61 @@ export default function App() {
         <StudentGoogleReviews />
 
         {/* 4. What Will You Be Able To Do? — Learning Outcomes (outcome-first) */}
-        <LearningOutcomes onOpenCheckout={handleOpenCheckout} />
+        <LearningOutcomes onOpenWebinar={handleOpenWebinar} />
 
         {/* 5. Who Is This For? — Target Audience with benefits */}
         <TargetAudience />
 
         {/* 6. Demo Class Preview — Watch Before Enrolling */}
         <VideoSpace
-          onOpenCheckout={handleOpenCheckout}
+          onOpenWebinar={handleOpenWebinar}
           onOpenVideoModal={() => handleOpenVideoPreview()}
         />
 
         {/* 7. More Social Proof — Real Classes, Real Students, Real Results */}
-        <RealClassesResults />
+        <RealClassesResults onOpenWebinar={handleOpenWebinar} />
 
         {/* 8. 4-Week Action Plan */}
-        <JourneyRoadmap onOpenCheckout={handleOpenCheckout} />
+        <JourneyRoadmap onOpenWebinar={handleOpenWebinar} />
 
         {/* 9. Why This Instead of Random YouTube Videos? */}
-        <WhyNotYoutube onOpenCheckout={handleOpenCheckout} />
+        <WhyNotYoutube onOpenWebinar={handleOpenWebinar} />
 
         {/* 10. Course Curriculum: 8-Step Blueprint */}
         <Curriculum
-          onOpenCheckout={handleOpenCheckout}
+          onOpenWebinar={handleOpenWebinar}
           onSelectPreviewLesson={(title, mod) =>
             handleOpenVideoPreview(title, mod)
           }
         />
 
         {/* 11. Meet the Instructor */}
-        <Instructor onOpenCheckout={handleOpenCheckout} />
+        <Instructor onOpenWebinar={handleOpenWebinar} />
 
         {/* 12. What You Get — Value Stack */}
-        <WhatYouGet onOpenCheckout={handleOpenCheckout} />
+        <WhatYouGet onOpenWebinar={handleOpenWebinar} />
 
         {/* 13. Pricing */}
-        <Pricing onOpenCheckout={handleOpenCheckout} />
+        <Pricing onOpenWebinar={handleOpenWebinar} />
 
-        <MoneyBackGuarantee onOpenCheckout={handleOpenCheckout} />
+        <MoneyBackGuarantee onOpenWebinar={handleOpenWebinar} />
 
         {/* 14. Frequently Asked Questions */}
-        <Faq onOpenCheckout={handleOpenCheckout} />
+        <Faq onOpenWebinar={handleOpenWebinar} />
 
         {/* 15. Final CTA */}
-        <FinalCta onOpenCheckout={handleOpenCheckout} />
+        <FinalCta onOpenWebinar={handleOpenWebinar} />
       </main>
 
       {/* Footer */}
       <Footer
-        onOpenCheckout={handleOpenCheckout}
+        onOpenWebinar={handleOpenWebinar}
         onOpenPortalPreview={() => setViewingPortal(true)}
       />
 
-      {/* Checkout Modal */}
-      <CheckoutModal
-        isOpen={checkoutOpen}
-        onClose={() => setCheckoutOpen(false)}
-      />
-
-      {/* Thank You & Enrollment Confirmation Modal */}
-      <ThankYouModal
-        isOpen={thankYouOpen}
-        onClose={() => setThankYouOpen(false)}
-        studentRecord={currentStudentRecord}
-        onOpenStudentPortal={() => setViewingPortal(true)}
+      <WebinarRegistrationModal
+        isOpen={webinarOpen}
+        onClose={() => setWebinarOpen(false)}
       />
 
       {/* Video Lesson Preview Modal */}
@@ -188,7 +164,7 @@ export default function App() {
         onClose={() => setVideoOpen(false)}
         lessonTitle={videoTitle}
         moduleTitle={videoModule}
-        onOpenCheckout={handleOpenCheckout}
+        onOpenWebinar={handleOpenWebinar}
       />
 
       {/* Mobile Sticky Bottom CTA — visible only on mobile when scrolled */}
@@ -204,8 +180,8 @@ export default function App() {
               </span>
             </div>
             <button
-              onClick={() => handleOpenCheckout("vip")}
-              className="flex-shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95 animate-enroll-blink"
+              onClick={handleOpenWebinar}
+              className="shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95 animate-enroll-blink"
             >
               <span>Join Free Webinar</span>
               <ArrowRight className="w-4 h-4" />
@@ -223,11 +199,11 @@ export default function App() {
                 AI Masterclass Webinar — ₹0
               </span>
               <span className="text-[10px] text-slate-400">
-                Lifetime access • Malayalam support
+                Live webinar • WhatsApp updates
               </span>
             </div>
             <button
-              onClick={() => handleOpenCheckout("vip")}
+              onClick={handleOpenWebinar}
               className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95"
             >
               <span>Join Free Webinar</span>

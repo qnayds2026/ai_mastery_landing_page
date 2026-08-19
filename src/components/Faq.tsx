@@ -3,10 +3,10 @@ import { FAQS, FaqItem } from '../data/courseData';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 interface FaqProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
-export const Faq: React.FC<FaqProps> = ({ onOpenCheckout }) => {
+export const Faq: React.FC<FaqProps> = ({ onOpenWebinar }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (idx: number) => {

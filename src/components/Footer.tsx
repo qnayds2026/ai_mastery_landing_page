@@ -3,11 +3,11 @@ import { Mail, Phone, Instagram, Facebook, Linkedin, Youtube } from 'lucide-reac
 import { QnaydsLogo } from './QnaydsLogo';
 
 interface FooterProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
   onOpenPortalPreview: () => void;
 }
 
-export const Footer: React.FC<FooterProps> = ({ onOpenCheckout, onOpenPortalPreview }) => {
+export const Footer: React.FC<FooterProps> = ({ onOpenWebinar, onOpenPortalPreview }) => {
   return (
     <footer className="bg-slate-900 border-t border-slate-800 text-slate-400 text-xs py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto space-y-8">

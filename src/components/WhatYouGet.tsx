@@ -2,7 +2,7 @@ import React from 'react';
 import { CheckCircle2, ArrowRight, Infinity, MessageCircle, BookOpen, Video, Map, Users } from 'lucide-react';
 
 interface WhatYouGetProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
 const inclusions = [
@@ -44,7 +44,7 @@ const inclusions = [
   },
 ];
 
-export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenCheckout }) => {
+export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenWebinar }) => {
   return (
     <section className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -107,7 +107,7 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenCheckout }) => {
               </p>
             </div>
             <button
-              onClick={() => onOpenCheckout('vip')}
+              onClick={onOpenWebinar}
               className="flex-shrink-0 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
             >
               <span>Join Free Webinar</span>

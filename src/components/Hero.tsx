@@ -8,11 +8,11 @@ import {
 } from "lucide-react";
 
 interface HeroProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
   onOpenVideoPreview: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
+export const Hero: React.FC<HeroProps> = ({ onOpenWebinar }) => {
   return (
     <section className="relative overflow-hidden bg-white border-b border-slate-200 pt-6 pb-12 sm:pt-8 sm:pb-16 lg:pt-10 lg:pb-16">
       {/* Background Glow */}
@@ -121,7 +121,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenCheckout }) => {
             {/* CTA */}
             <button
               type="button"
-              onClick={() => onOpenCheckout("vip")}
+              onClick={onOpenWebinar}
               className="mt-5 w-full group rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-4 flex items-center justify-center gap-3 shadow-xl shadow-blue-600/20 hover:shadow-blue-600/30 hover:scale-[1.01] active:scale-[0.98] transition-all cursor-pointer"
             >
               <span className="text-base sm:text-lg font-black">

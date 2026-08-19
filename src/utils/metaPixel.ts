@@ -68,27 +68,3 @@ export const trackMetaEvent = (eventName: string, data?: Record<string, any>) =>
   }
 };
 
-/**
- * Convenience helper for InitiateCheckout
- */
-export const trackInitiateCheckout = (value: number, planName: string) => {
-  trackMetaEvent('InitiateCheckout', {
-    value,
-    currency: 'INR',
-    content_name: planName,
-    content_category: 'Course Subscription'
-  });
-};
-
-/**
- * Convenience helper for Purchase
- */
-export const trackPurchase = (transactionId: string, value: number, planName: string) => {
-  trackMetaEvent('Purchase', {
-    value,
-    currency: 'INR',
-    content_name: planName,
-    transaction_id: transactionId,
-    content_type: 'product'
-  });
-};

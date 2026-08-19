@@ -3,10 +3,10 @@ import { Award, CheckCircle2, Sparkles, Globe, TrendingUp, ArrowRight } from 'lu
 import sawadImg from './sawad.png';
 
 interface InstructorProps {
-  onOpenCheckout?: (planId?: string) => void;
+  onOpenWebinar?: () => void;
 }
 
-export const Instructor: React.FC<InstructorProps> = ({ onOpenCheckout }) => {
+export const Instructor: React.FC<InstructorProps> = ({ onOpenWebinar }) => {
   const achievements = [
     { icon: Globe, text: "Educated 1 Million+ learners via social media" },
     { icon: TrendingUp, text: "Helped multiple businesses scale via AI & Automation" },
@@ -101,9 +101,9 @@ export const Instructor: React.FC<InstructorProps> = ({ onOpenCheckout }) => {
             </div>
 
             {/* CTA */}
-            {onOpenCheckout && (
+            {onOpenWebinar && (
               <button
-                onClick={() => onOpenCheckout('vip')}
+                onClick={onOpenWebinar}
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm px-7 py-3.5 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-pulse-blink"
               >
                 <span>Start Your AI Journey</span>

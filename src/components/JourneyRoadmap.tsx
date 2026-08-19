@@ -10,10 +10,10 @@ import {
 } from 'lucide-react';
 
 interface JourneyRoadmapProps {
-  onOpenCheckout?: (planId?: string) => void;
+  onOpenWebinar?: () => void;
 }
 
-export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
+export function JourneyRoadmap({ onOpenWebinar }: JourneyRoadmapProps) {
   const steps = [
     {
       step: "Week 1",
@@ -128,7 +128,7 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
         </div>
 
         {/* CTA Banner inside Roadmap */}
-        {onOpenCheckout && (
+        {onOpenWebinar && (
           <div className="mt-14 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900 rounded-3xl p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 relative overflow-hidden border border-blue-900/50">
             <div className="space-y-2 text-center md:text-left relative z-10">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-950/80 px-3 py-1 rounded-full border border-blue-800">
@@ -143,7 +143,7 @@ export function JourneyRoadmap({ onOpenCheckout }: JourneyRoadmapProps) {
             </div>
 
             <button
-              onClick={() => onOpenCheckout('vip')}
+              onClick={onOpenWebinar}
               className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-blue-600/30 flex items-center gap-2.5 transition-all hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap shrink-0 relative z-10 animate-enroll-blink"
             >
               <span>Join Free Webinar</span>

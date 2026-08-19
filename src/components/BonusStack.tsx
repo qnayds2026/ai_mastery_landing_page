@@ -3,7 +3,7 @@ import { BONUSES } from '../data/courseData';
 import { Gift, Check, Sparkles, Database, FileCheck, Code, Users, ArrowRight } from 'lucide-react';
 
 interface BonusStackProps {
-  onOpenCheckout: (planId?: string) => void;
+  onOpenWebinar: () => void;
 }
 
 const BONUS_ICON_MAP: Record<string, React.ReactNode> = {
@@ -13,7 +13,7 @@ const BONUS_ICON_MAP: Record<string, React.ReactNode> = {
   Users: <Users className="w-6 h-6 text-blue-600" />
 };
 
-export const BonusStack: React.FC<BonusStackProps> = ({ onOpenCheckout }) => {
+export const BonusStack: React.FC<BonusStackProps> = ({ onOpenWebinar }) => {
   return (
     <section id="bonuses" className="py-20 bg-slate-50 relative overflow-hidden border-t border-slate-200">
       
@@ -87,7 +87,7 @@ export const BonusStack: React.FC<BonusStackProps> = ({ onOpenCheckout }) => {
           </div>
           <div className="pt-2">
             <button
-              onClick={() => onOpenCheckout('vip')}
+              onClick={onOpenWebinar}
               className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/20 transition-all inline-flex items-center gap-2 cursor-pointer animate-enroll-blink"
             >
               <span>Join Free Webinar</span>
