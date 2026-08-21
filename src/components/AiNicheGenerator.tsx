@@ -153,7 +153,7 @@ export const AiNicheGenerator: React.FC<AiNicheGeneratorProps> = ({ onOpenWebina
                   onClick={onOpenWebinar}
                   className="bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all whitespace-nowrap shadow-md shadow-blue-600/20 cursor-pointer animate-enroll-blink"
                 >
-                  Join Free Webinar
+                  🔥 Join Webinar for ₹99
                 </button>
               </div>
 

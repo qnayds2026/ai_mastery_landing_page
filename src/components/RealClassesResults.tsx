@@ -167,7 +167,7 @@ export function RealClassesResults({ onOpenWebinar }: RealClassesResultsProps) {
             onClick={onOpenWebinar}
             className="mt-6 inline-flex items-center justify-center gap-2 bg-white text-blue-700 hover:bg-blue-50 font-bold px-7 py-3.5 rounded-xl shadow-lg hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
-            <span>Join Free Webinar</span>
+            <span>🔥 Join Webinar for ₹99</span>
             <Play className="w-4 h-4 fill-blue-700" />
           </button>
 

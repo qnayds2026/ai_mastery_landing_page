@@ -18,13 +18,13 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenWebinar }) => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-3.5 py-1 rounded-full text-xs font-bold text-blue-700 uppercase tracking-widest">
-            <Zap className="w-3.5 h-3.5 text-blue-600" /> Free Webinar Registration
+            <Zap className="w-3.5 h-3.5 text-blue-600" /> Live Webinar Registration
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900">
             Simple, Honest Pricing
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            Free Registration • Live Webinar • WhatsApp Updates
+            One-Time Webinar Fee • Live Webinar • WhatsApp Access
           </p>
         </div>
 
@@ -71,7 +71,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenWebinar }) => {
                         FREE
                       </span>
                     </div>
-                    <div className="text-[11px] text-slate-500 mt-1">Free webinar registration • No payment required</div>
+                    <div className="text-[11px] text-slate-500 mt-1">One-time webinar fee • Live webinar • WhatsApp access</div>
                   </div>
 
                   {/* Features List */}

@@ -332,22 +332,21 @@ export const BONUSES: Bonus[] = [
 export const PRICING_PLANS: PricingPlan[] = [
   {
     id: "recorded",
-    name: "Free AI Masterclass Webinar",
-    tagline: "Live webinar with practical AI strategies and joining updates",
-    price: "0",
+    name: "🎓 LIVE AI MASTERCLASS",
+    tagline: "One-Time Webinar Fee • Live Webinar • WhatsApp Access",
+    price: "99",
     originalPrice: "5,000",
     currencySymbol: "₹",
     popular: true,
-    badge: "🔥 FREE WEBINAR",
+    badge: "🔥 LIMITED WEBINAR ACCESS",
     features: [
       "Live AI Masterclass Webinar",
       "Practical AI Strategies",
       "Webinar Joining Updates",
       "WhatsApp Community Access",
-      "Free Registration",
       "Live Q&A Opportunity"
     ],
-    ctaText: "Join Free Webinar — ₹0"
+    ctaText: "🔥 Join Webinar for ₹99"
   }
 ];
 

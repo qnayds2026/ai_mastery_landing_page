@@ -146,7 +146,7 @@ export function JourneyRoadmap({ onOpenWebinar }: JourneyRoadmapProps) {
               onClick={onOpenWebinar}
               className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm rounded-2xl shadow-lg shadow-blue-600/30 flex items-center gap-2.5 transition-all hover:scale-105 active:scale-95 cursor-pointer whitespace-nowrap shrink-0 relative z-10 animate-enroll-blink"
             >
-              <span>Join Free Webinar</span>
+              <span>🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

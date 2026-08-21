@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWebinar }) => {
             {/* Price */}
             <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
               <span className="text-4xl sm:text-5xl font-black tracking-tight text-slate-900">
-                ₹0
+                ₹99
               </span>
 
               <span className="text-lg sm:text-2xl font-bold text-slate-400 line-through">
@@ -125,7 +125,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWebinar }) => {
               className="mt-5 w-full group rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-5 py-4 flex items-center justify-center gap-3 shadow-xl shadow-blue-600/20 hover:shadow-blue-600/30 hover:scale-[1.01] active:scale-[0.98] transition-all cursor-pointer"
             >
               <span className="text-base sm:text-lg font-black">
-                Join Free Webinar
+                🔥 Join Webinar for ₹99
               </span>
 
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

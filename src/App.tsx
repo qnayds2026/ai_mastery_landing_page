@@ -175,15 +175,15 @@ export default function App() {
               <span className="text-[11px] text-slate-400 font-medium">
                 AI Masterclass
               </span>
-              <span className="text-lg font-black text-white leading-tight">
-                <span className="line-through text-slate-400 text-sm mr-1">₹5,000</span> ₹0
+                <span className="text-lg font-black text-white leading-tight">
+                <span className="line-through text-slate-400 text-sm mr-1">₹5,000</span> ₹99
               </span>
             </div>
             <button
               onClick={handleOpenWebinar}
               className="shrink-0 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95 animate-enroll-blink"
             >
-              <span>Join Free Webinar</span>
+              <span>🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -196,7 +196,7 @@ export default function App() {
           <div className="bg-slate-900/98 text-white px-5 py-3 rounded-2xl shadow-2xl border border-slate-700/80 flex items-center gap-4 animate-in fade-in slide-in-from-bottom-5 duration-300">
             <div className="flex flex-col">
               <span className="text-xs font-extrabold text-white">
-                AI Masterclass Webinar — ₹0
+                AI Masterclass Webinar — ₹99
               </span>
               <span className="text-[10px] text-slate-400">
                 Live webinar • WhatsApp updates
@@ -206,7 +206,7 @@ export default function App() {
               onClick={handleOpenWebinar}
               className="bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-xs px-5 py-2.5 rounded-xl shadow-lg shadow-blue-600/30 transition-all flex items-center gap-1.5 cursor-pointer whitespace-nowrap active:scale-95"
             >
-              <span>Join Free Webinar</span>
+              <span>🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>

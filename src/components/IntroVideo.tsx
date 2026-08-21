@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Play, Sparkles, Youtube } from 'lucide-react';
+import React, { useState } from "react";
+import { Play, Sparkles, Youtube } from "lucide-react";
 
 export const IntroVideo: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = 'wEG3VlBESJU';
+  const videoId = "Qk1BtYgNrA0";
 
   return (
     <section className="py-12 sm:py-16 bg-slate-900 text-white relative overflow-hidden">
@@ -24,7 +24,8 @@ export const IntroVideo: React.FC = () => {
             WATCH BEFORE YOU ENROLL
           </h2>
           <p className="text-sm sm:text-base text-slate-300 mt-2 max-w-2xl mx-auto">
-            ഈ മാസ്റ്റർക്ലാസിൽ എന്തൊക്കെ പഠിക്കാം, എങ്ങനെ വരുമാനം ഉണ്ടാക്കാം എന്ന് ചുരുക്കത്തിൽ മനസ്സിലാക്കാം
+            ഈ മാസ്റ്റർക്ലാസിൽ എന്തൊക്കെ പഠിക്കാം, എങ്ങനെ വരുമാനം ഉണ്ടാക്കാം
+            എന്ന് ചുരുക്കത്തിൽ മനസ്സിലാക്കാം
           </p>
         </div>
 
@@ -46,7 +47,8 @@ export const IntroVideo: React.FC = () => {
                   src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
                   onError={(e) => {
                     // Fallback if maxresdefault is missing
-                    (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+                    (e.target as HTMLImageElement).src =
+                      `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
                   }}
                   alt="Intro Video Thumbnail"
                   className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"

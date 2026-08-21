@@ -62,7 +62,7 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenWebinar }) => {
             </span>
           </h2>
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed">
-            ₹0-ൽ free webinar registration ചെയ്ത് practical AI strategies പഠിക്കൂ.
+            ₹99-ൽ live webinar registration ചെയ്ത് practical AI strategies പഠിക്കൂ.
           </p>
         </div>
 
@@ -99,8 +99,8 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenWebinar }) => {
                 Everything above for just
               </div>
               <div className="flex items-baseline gap-2 justify-center sm:justify-start">
-                <span className="text-4xl sm:text-5xl font-black text-slate-900">₹0</span>
-                <span className="text-sm font-semibold text-slate-500"><span className="line-through">₹5,000</span> • free webinar</span>
+                <span className="text-4xl sm:text-5xl font-black text-slate-900">₹99</span>
+                <span className="text-sm font-semibold text-slate-500"><span className="line-through">₹5,000</span> • live webinar</span>
               </div>
               <p className="mt-2 text-xs text-slate-500">
                 No payment required. Webinar details are sent after registration.
@@ -110,7 +110,7 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenWebinar }) => {
               onClick={onOpenWebinar}
               className="flex-shrink-0 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold text-sm sm:text-base px-8 py-4 rounded-xl shadow-lg shadow-blue-600/20 hover:shadow-xl hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer animate-enroll-blink"
             >
-              <span>Join Free Webinar</span>
+              <span>🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </div>

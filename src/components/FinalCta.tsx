@@ -30,7 +30,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenWebinar }) => {
 
         {/* Subtext */}
         <p className="text-slate-300 text-sm sm:text-base leading-relaxed max-w-xl mx-auto mb-8">
-          ₹0-ൽ ഒരു live AI webinar-ൽ join ചെയ്ത്, step-by-step practical AI
+          ₹99-ൽ ഒരു live AI webinar-ൽ join ചെയ്ത്, step-by-step practical AI
           strategies പഠിക്കൂ. Beginner-friendly. Malayalam support.
         </p>
 
@@ -38,7 +38,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenWebinar }) => {
         <div className="flex flex-col items-center gap-4">
           <div className="flex items-center gap-3 text-white">
             <span className="text-slate-400 text-sm font-medium line-through">₹5,000</span>
-            <span className="text-4xl font-black">₹0</span>
+            <span className="text-4xl font-black">₹99</span>
           </div>
 
           <button
@@ -47,7 +47,7 @@ export const FinalCta: React.FC<FinalCtaProps> = ({ onOpenWebinar }) => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-600 rounded-xl" />
             <div className="relative bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 sm:py-5 rounded-[10px] flex items-center justify-center gap-3 transition-colors">
-              <span className="text-base sm:text-lg">Join Free Webinar</span>
+              <span className="text-base sm:text-lg">🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </button>

@@ -83,14 +83,14 @@ export const BonusStack: React.FC<BonusStackProps> = ({ onOpenWebinar }) => {
             Core Masterclass ($297) + 4 Bonus Vaults ($1,497) = <span className="line-through text-slate-400">$1,794 Value</span>
           </div>
           <div className="text-3xl sm:text-4xl font-extrabold text-blue-600">
-            Join Today For ₹0 <span className="text-xs text-slate-500 font-normal">(<span className="line-through">₹5,000</span> webinar)</span>
+            Join Today For ₹99 <span className="text-xs text-slate-500 font-normal">(<span className="line-through">₹5,000</span> webinar)</span>
           </div>
           <div className="pt-2">
             <button
               onClick={onOpenWebinar}
               className="bg-blue-600 hover:bg-blue-700 text-white font-extrabold text-sm sm:text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/20 transition-all inline-flex items-center gap-2 cursor-pointer animate-enroll-blink"
             >
-              <span>Join Free Webinar</span>
+              <span>🔥 Join Webinar for ₹99</span>
               <ArrowRight className="w-5 h-5 text-white" />
             </button>
           </div>
