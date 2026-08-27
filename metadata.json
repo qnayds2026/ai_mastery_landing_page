@@ -1,0 +1,6 @@
+{
+  "name": "Qnayds",
+  "description": "High-converting landing page and interactive training portal for the AI Money Making Mastery course.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
