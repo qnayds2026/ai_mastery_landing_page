@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+html,
+body {
+  font-family: "Manrope", "Noto Sans Malayalam", sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes buttonBlink {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.015);
+    box-shadow: 0 15px 40px rgba(37, 99, 235, 0.5);
+  }
+}
+
+@keyframes buttonBlinkPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+  }
+  50% {
+    opacity: 0.92;
+    transform: scale(1.02);
+    box-shadow: 0 20px 50px rgba(59, 130, 246, 0.6);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+.animate-enroll-blink {
+  animation: buttonBlink 2.5s infinite ease-in-out;
+  will-change: transform, box-shadow, opacity;
+}
+
+.animate-pulse-blink {
+  animation: buttonBlinkPulse 2.5s infinite ease-in-out;
+  will-change: transform, box-shadow, opacity;
+}
+
+.animate-shimmer {
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
