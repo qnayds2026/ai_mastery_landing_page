@@ -199,7 +199,7 @@ export default function App() {
                 AI Masterclass Webinar — ₹99
               </span>
               <span className="text-[10px] text-slate-400">
-                Live webinar • 1-Hour Master Class  • WhatsApp updates
+                Live webinar • 90-Minute Master Class  • WhatsApp updates
               </span>
             </div>
             <button

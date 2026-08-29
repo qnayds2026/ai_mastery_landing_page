@@ -3,7 +3,7 @@ import { Play, Sparkles, Youtube } from "lucide-react";
 
 export const IntroVideo: React.FC = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const videoId = "Qk1BtYgNrA0";
+  const videoId = "b_QcH_6HUco";
 
   return (
     <section className="py-12 sm:py-16 bg-slate-900 text-white relative overflow-hidden">

@@ -183,7 +183,7 @@ export const COURSE_MODULES: CourseModule[] = [
     lessonsCount: 5,
     totalHours: "2.9 hrs",
     outcomes: [
-      "Design high-selling Notion templates and AI planners in 1 hour",
+      "Design high-selling Notion templates and AI planners in 90 minutes",
       "Package premium Midjourney art prompts and sell them on PromptBase & Etsy",
       "Set up evergreen Gumroad & Shopify sales funnels with automated order fulfillment",
       "Rank #1 on Etsy and Google Search using AI SEO strategies"

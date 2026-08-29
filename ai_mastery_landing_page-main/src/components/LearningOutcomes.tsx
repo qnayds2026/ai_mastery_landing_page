@@ -45,14 +45,16 @@ export const LearningOutcomes: React.FC<LearningOutcomesProps> = ({
             OUTCOMES
           </div>
           <h2 className="text-slate-900 font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-tight leading-tight">
-            ഈ Masterclass കഴിഞ്ഞാൽ
+            ഈ 90-Minute Masterclass കഴിഞ്ഞാൽ
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mt-1">
               നിങ്ങൾക്ക് എന്തൊക്കെ ചെയ്യാൻ കഴിയും?
             </span>
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto">
-            Theory അല്ല, practical skills. ഈ outcomes real-world situations-ൽ
-            directly apply ചെയ്യാൻ കഴിയുന്നവയാണ്.
+            Theory മാത്രം അല്ല — ഈ 90-Minute Masterclass-ൽ നിങ്ങൾക്ക്
+            real-world AI skills practical ആയി step-by-step പഠിക്കാം.ഈ outcomes real-world situations-ൽ
+             directly apply ചെയ്യാൻ കഴിയുന്നവയാണ്.
+            
           </p>
         </div>
 
@@ -90,6 +92,40 @@ export const LearningOutcomes: React.FC<LearningOutcomesProps> = ({
           </div>
         )}
       </div>
+              {/* Bonus Prompt Kit */}
+        <div className="max-w-3xl mx-auto">
+          <div className="rounded-2xl border border-amber-200 bg-gradient-to-r from-amber-50 to-orange-50 p-6 sm:p-8 text-center shadow-sm">
+            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-xs sm:text-sm font-extrabold mb-4">
+              🎁 BONUS WORTH ₹2,000+
+            </div>
+
+            <h3 className="text-slate-900 font-extrabold text-xl sm:text-2xl md:text-3xl">
+              2,000+ AI Prompts Bonus Kit
+            </h3>
+
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed mt-3 max-w-2xl mx-auto">
+              Masterclass-നൊപ്പം 2,000+ ready-to-use AI prompts അടങ്ങിയ
+              valuable Bonus Kit ലഭിക്കും. Content creation, marketing,
+              business, freelancing തുടങ്ങിയ കാര്യങ്ങളിൽ prompts
+              practical ആയി ഉപയോഗിക്കാം.
+            </p>
+
+            <div className="mt-5 flex flex-wrap justify-center gap-2">
+              <span className="bg-white border border-amber-200 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold text-slate-700">
+                🤖 AI Prompts
+              </span>
+              <span className="bg-white border border-amber-200 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold text-slate-700">
+                📱 Content Creation
+              </span>
+              <span className="bg-white border border-amber-200 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold text-slate-700">
+                📈 Marketing
+              </span>
+              <span className="bg-white border border-amber-200 px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold text-slate-700">
+                💼 Business & Freelancing
+              </span>
+            </div>
+          </div>
+        </div>
     </section>
   );
 };

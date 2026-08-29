@@ -55,7 +55,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
           </h2>
 
           <p className="mt-4 text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-            Masterclass-ൽ പഠിച്ച AI skills practical ആയി ഉപയോഗിച്ച
+           90-Minute Masterclass-ൽ പഠിച്ച AI skills practical ആയി ഉപയോഗിച്ച
             വിദ്യാർത്ഥികളുടെ experiences നോക്കൂ.
           </p>
         </div>

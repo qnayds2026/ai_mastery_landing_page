@@ -56,7 +56,7 @@ export const WhatYouGet: React.FC<WhatYouGetProps> = ({ onOpenWebinar }) => {
             What's Included
           </div>
           <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-            ഈ Masterclass-ൽ
+            ഈ 90-Minute Masterclass-ൽ
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mt-1">
               നിങ്ങൾക്ക് എന്തൊക്കെ ലഭിക്കും?
             </span>

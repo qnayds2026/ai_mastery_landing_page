@@ -144,7 +144,7 @@ export const StudentPortal: React.FC<StudentPortalProps> = ({ onBackToLanding })
                 : 'bg-white text-slate-600 hover:text-slate-900 border border-slate-200'
             }`}
           >
-            <BookOpen className="w-4 h-4" /> Masterclass Video Lessons
+            <BookOpen className="w-4 h-4" /> 90-MinuteMasterclass Video Lessons
           </button>
 
           <button
@@ -181,7 +181,7 @@ export const StudentPortal: React.FC<StudentPortalProps> = ({ onBackToLanding })
           </button>
         </div>
 
-        {/* TAB 1: MASTERCLASS VIDEO LESSONS */}
+        {/* TAB 1: 90-MINUTE MASTERCLASS VIDEO LESSONS */}
         {activeTab === 'lessons' && (
           <div className="grid lg:grid-cols-12 gap-8">
             

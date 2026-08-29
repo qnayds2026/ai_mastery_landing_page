@@ -34,7 +34,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWebinar }) => {
 
         {/* 1-Hour Master Class Badge */}
         <div className="inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700">
-       ⏱ 1-Hour Master Class
+       ⏱ 90-Minute Master Class
         </div>
 
         {/* Main Headline */}
@@ -124,7 +124,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenWebinar }) => {
             </p>
             {/* Master Class Details */}
             <p className="mt-3 text-sm sm:text-base font-bold text-blue-700">
-             ⏱ 1-Hour Master Class
+             ⏱ 90-Minute Master Class
              <span className="text-slate-400"> • </span>
              Learn One Practical Skill
              </p>

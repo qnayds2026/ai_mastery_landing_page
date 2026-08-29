@@ -159,7 +159,7 @@ export function RealClassesResults({ onOpenWebinar }: RealClassesResultsProps) {
           </h3>
 
           <p className="mt-2 sm:mt-3 text-blue-100 max-w-2xl mx-auto text-sm sm:text-base">
-            Join the AI Masterclass and start building practical AI skills
+            Join the 90-Minute AI Masterclass and start building practical AI skills
             with a structured learning path.
           </p>
 

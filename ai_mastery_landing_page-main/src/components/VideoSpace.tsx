@@ -42,7 +42,7 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
       thumbnail:
         'https://img.youtube.com/vi/wllEGVxCACA/hqdefault.jpg',
       description:
-        'Watch this free demo class session to see how our step-by-step AI Masterclass is taught and how you can monetize AI tools.',
+        'Watch this free demo of our 90-Minute AI Masterclass to see how our step-by-step sessions are taught and how you can monetize AI tools.',
       isUnlocked: true,
     },
   ];
@@ -194,7 +194,7 @@ export const VideoSpace: React.FC<VideoSpaceProps> = ({
         {/* Below Video — Context + CTA */}
         <div className="max-w-3xl mx-auto text-center space-y-4">
           <p className="text-slate-600 text-sm sm:text-base font-medium">
-            ഇതുപോലെ step-by-step practical sessions ആണ് Masterclass-ൽ ലഭിക്കുന്നത്.
+            ഇതുപോലെ step-by-step practical sessions ആണ് 90-Minute Masterclass-ൽ ലഭിക്കുന്നത്.
           </p>
           {onOpenWebinar && (
             <button

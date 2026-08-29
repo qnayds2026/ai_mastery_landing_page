@@ -410,7 +410,7 @@ export const WebinarRegistrationModal: React.FC<
 
       name: "Qnayds AI Academy",
 
-      description: "Live AI Masterclass Webinar",
+      description: "Live 90-MinuteAI Masterclass Webinar",
 
       order_id: orderId,
 
@@ -613,7 +613,7 @@ export const WebinarRegistrationModal: React.FC<
 
             <div>
               <p className="text-xs font-bold uppercase tracking-wide text-white">
-                🎓 Live AI Masterclass
+                🎓 Live 90-Minute AI Masterclass
               </p>
 
               <p className="text-[11px] text-slate-300">
@@ -703,7 +703,7 @@ export const WebinarRegistrationModal: React.FC<
                   id="webinar-modal-title"
                   className="text-2xl font-black text-slate-900 sm:text-3xl"
                 >
-                  Join the Live AI Masterclass for ₹99
+                  Join the Live 90-Minute AI Masterclass for ₹99
                 </h2>
 
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
