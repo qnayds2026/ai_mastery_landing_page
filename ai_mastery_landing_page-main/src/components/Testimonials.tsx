@@ -17,6 +17,12 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
 }) => {
   const [filter, setFilter] = useState<string>("all");
 
+  const audioFiles = [
+    "/audio/student2.ogg",
+    "/audio/student1.ogg",
+    "/audio/student3.ogg",
+  ];
+
   const filtered =
     filter === "all"
       ? TESTIMONIALS
@@ -24,8 +30,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
           t.businessType.toLowerCase().includes(filter.toLowerCase()),
         );
 
-  // Show only the first 3 proofs in the initial "All" view.
-  // When a category is selected, show that category's results.
+  // Show only the first 3 testimonials in the initial "All" view.
   const visibleTestimonials =
     filter === "all" ? filtered.slice(0, 3) : filtered;
 
@@ -38,15 +43,14 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-blue-50 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-emerald-50 border border-emerald-200 px-3.5 py-1.5 rounded-full text-xs font-bold text-emerald-700 mb-4">
             <TrendingUp className="w-3.5 h-3.5" />
             REAL STUDENT EXPERIENCES
           </div>
 
-          {/* Main Heading */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight">
             ഇവർക്ക് പഠിക്കാനും ചെയ്യാനും കഴിഞ്ഞെങ്കിൽ...
             <span className="block mt-2 text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
@@ -103,7 +107,7 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
 
         {/* Testimonial Cards */}
         <div className="grid md:grid-cols-3 gap-5 lg:gap-6">
-          {visibleTestimonials.map((item) => (
+          {visibleTestimonials.map((item, index) => (
             <div
               key={item.id}
               className="group bg-white border border-slate-200 hover:border-blue-300 rounded-2xl p-5 sm:p-6 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col"
@@ -154,13 +158,25 @@ export const Testimonials: React.FC<TestimonialsProps> = ({
                 </span>
               </div>
 
-              {/* Quote */}
-              <div className="relative flex-1">
-                <Quote className="absolute -top-2 -left-1 w-8 h-8 text-blue-100 fill-blue-50" />
+              {/* Voice Feedback */}
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-3">
+                  <Quote className="w-5 h-5 text-blue-500" />
 
-                <p className="relative text-sm text-slate-700 leading-relaxed font-medium pl-1">
-                  "{item.quote}"
-                </p>
+                  <span className="text-sm font-bold text-slate-700">
+                    Voice Feedback
+                  </span>
+                </div>
+
+                <audio
+                  key={audioFiles[index]}
+                  controls
+                  preload="metadata"
+                  className="w-full"
+                  src={audioFiles[index]}
+                >
+                  Your browser does not support audio playback.
+                </audio>
               </div>
 
               {/* Result */}
